@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JijueHealth - Sexual and Reproductive Health and Rights</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* Navigation Menu at the Top */
+        #navigation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-image: url('media/navigation-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: 999;
+            padding: 10px 20px;
+            box-sizing: border-box;
+        }
+
+        #navigation h1 {
+            font-size: 24px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+
+        #navigation .nav-links {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+
+        #navigation .nav-links a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 15px;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.8);
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+
+        #navigation .nav-links a:hover {
+            background-color: #ffcc00;
+        }
+
+        /* Slideshow Container */
+        .slideshow {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Individual Slides */
+        .slide {
+            width: 100%;
+            height: 100vh;
+            flex: 0 0 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            overflow-y: auto;
+        }
+
+        .slide:target {
+            opacity: 1;
+            z-index: 1;
+        }
+
+        .slide p {
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 10px auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: justify;
+        }
+
+        .work, .profile {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            text-align: left;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .work img, .profile img {
+            width: 200px;
+            height: 200px;
+            margin-right: 20px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .work p, .profile p {
+            flex: 1;
+            margin: 0;
+        }
+
+        .slide iframe {
+            width: 90%;
+            height: 500px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: none;
+        }
+
+        @media (max-width: 768px) {
+            #navigation {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            #navigation h1 {
+                font-size: 20px;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            #navigation .nav-links {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            #navigation .nav-links a {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+
+            .slide h1, .slide h2 {
+                font-size: 24px;
+            }
+
+            .slide p {
+                font-size: 16px;
+            }
+
+            .work, .profile {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .work img, .profile img {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .slide iframe {
+                width: 100%;
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Menu at the Top -->
+    <div id="navigation">
+        <h1>JIJUE HEALTH</h1>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#founder">Founders</a>
+            <a href="#student-volunteers">Student Volunteers</a>
+            <a href="#health-volunteers">Health Volunteers</a>
+            <a href="#Our Works">Our Works</a>
+            <a href="#services">Services</a>
+            <a href="#products">Products</a>
+            <a href="#volunteer">Join Us</a>
+            <a href="#contact Us">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Slideshow Container -->
+    <div class="slideshow">
+        <!-- Homepage Slide -->
+        <div id="home" class="slide">
+            <h1>JIJUE HEALTH</h1>
+            <p> "HEALTH WITHOUT LIMITS, CARE WITHOUT STIGMA"</p>
+            <img src="jijue-health-pictures/homepage-image.webp" width="400" height="400" alt="Homepage Picture" loading="lazy">
+            <p><strong>Mission:</strong> To empower adolescents and young adults in urban slums by providing access to comprehensive Sexual and Reproductive Health and Rights (SRHR) education and services.</p>
+            <p><strong>Vision:</strong> A world where every young person has equitable access to SRHR knowledge and services, free from stigma and barriers.</p>
+            <p><strong>Services:</strong> SRHR education, confidential support, and access to essential products for young people in urban slums.</p>
+            <!-- Video Embed for Home Slide -->
+            <iframe src="https://drive.google.com/file/d/1_SBK0ZZmZCDNntV4clhi6szqmNMSZN5c/preview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <!-- About Us Slide -->
+        <div id="about" class="slide">
+            <h2>ABOUT US</h2>
+            <p><strong>Mission Statement:</strong> Our mission is to bridge the gap in access to quality SRHR education and services for adolescents and young adults, aged 13-25, living in Kenya's urban slums.</p>
+            <p><strong>Vision Statement:</strong> Our vision is to create a future where all adolescents and young adults, regardless of their socio-economic background, can access the information, tools, and support needed to lead healthy, empowered lives.</p>
+            <!-- Video Embed for About Us Slide -->
+            <iframe src="https://drive.google.com/file/d/1kMeZmSNpCbaje83Rh5YcuG4nMDpxh2L-/preview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <!-- Founders Slide -->
+        <div id="founder" class="slide">
+            <h2>FOUNDER</h2>
+            <img src="jijue-health-pictures/tracy-achieng.webp" width="200" height="200" alt="Tracy Atieno Achieng" loading="lazy">
+            <p><strong>Tracy Atieno Achieng</strong> - Founder, Mechanical Engineering Student at Ashesi University.</p>
+            <p><strong>Bio:</strong> Tracy is a passionate advocate for youth empowerment and healthcare accessibility, with a strong commitment to breaking barriers in Sexual and Reproductive Health and Rights (SRHR).</p>
+        </div>
+
+        <!-- Student Volunteers Slide -->
+        <div id="student-volunteers" class="slide">
+            <h2>STUDENT VOLUNTEERS</h2>
+            <div class="profiles">
+                <div class="profile">
+                    <img src="jijue-health-pictures/maureen-kazira.webp" width="100" height="100" alt="Maureen Kazira" loading="lazy">
+                    <p><strong>Maureen Kazira</strong> - Health Sciences and Public Health Student at Kenyatta University.</p>
+                    <p><strong>Bio:</strong> Maureen is passionate about improving healthcare systems and enjoys combining academic knowledge with interests in research, project management, and health economics.</p>
+                </div>
+                <div class="profile">
+                    <img src="jijue-health-pictures/jazmine-achieng.webp" width="100" height="100" alt="Jazmine Achieng" loading="lazy">
+                    <p><strong>Jazmine Achieng</strong> - Perioperative Theatre Nurse/Tech Student at Tricent Medical College.</p>
+                    <p><strong>Bio:</strong> Jazmine is committed to bridging the gap between healthcare providers and young people, ensuring they receive accurate, non-judgmental information and access to essential SRHR services.</p>
+                </div>
+                <div class="profile">
+                    <img src="jijue-health-pictures/baria-mohammed.webp" width="100" height="100" alt="Baria Mohammed" loading="lazy">
+                    <p><strong>Baria Mohammed</strong> - Student at Nairobits studying Graphic and Design.</p>
+                    <p><strong>Bio:</strong> Baria is dedicated to fostering open, stigma-free conversations around SRHR, ensuring that youth receive the information and services they need to make informed health decisions.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Health Volunteers Slide -->
+        <div id="health-volunteers" class="slide">
+            <h2>HEALTH VOLUNTEERS</h2>
+            <div class="profiles">
+                <div class="profile">
+                    <img src="jijue-health-pictures/diane-moitie.webp" width="100" height="100" alt="Diane Moitie" loading="lazy">
+                    <p><strong>Diane Moitie</strong> - Community Health Worker.</p>
+                    <p><strong>Bio:</strong> Diane is an advocate for accessible and youth-friendly healthcare services. She helps young people overcome stigma and fear, making it easier for them to make informed health decisions.</p>
+                </div>
+                <div class="profile">
+                    <img src="jijue-health-pictures/dorothy-nyanchoka.webp" width="100" height="100" alt="Dorothy Nyanchoka" loading="lazy">
+                    <p><strong>Dorothy Nyanchoka</strong> - Community Health Worker.</p>
+                    <p><strong>Bio:</strong> Dorothy is passionate about breaking barriers to healthcare in marginalized communities. With extensive experience in public health, she supports in delivering educational sessions, engaging with young people, and strengthening partnerships with local pharmacies and health providers.</p>
+                </div>
+                <div class="profile">
+                    <img src="jijue-health-pictures/caroline-teresa-otieno.webp" width="100" height="100" alt="Caroline Teresa Otieno" loading="lazy">
+                    <p><strong>Caroline Teresa Otieno</strong> - Community Health Worker.</p>
+                    <p><strong>Bio:</strong> Caroline believes in the power of education to transform lives. She works closely with adolescents and young adults to provide them with the knowledge and resources they need to make informed choices about their sexual and reproductive health.</p>
+                </div>
+                <div class="profile">
+                    <img src="jijue-health-pictures/vivian-achieng.webp" width="100" height="100" alt="Vivian Achieng" loading="lazy">
+                    <p><strong>Vivian Achieng</strong> - Community Health Worker.</p>
+                    <p><strong>Bio:</strong> With a deep passion and experience in empowering young people with Sexual and Reproductive Health and Rights (SRHR) education in urban slums, she understands the challenges that adolescents and young adults face in accessing healthcare.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Our Works Slide -->
+        <div id="Our Works" class="slide">
+            <h2>OUR WORKS</h2>
+            <div class="work">
+                <img src="jijue-health-pictures/menstrual-cup-demo.webp" width="400" height="400" alt="Demonstration of the use of menstrual cups" loading="lazy">
+                <p><i><b>Demonstration of the use of menstrual cups during our community outreach programme</b></i></p>
+            </div>
+            <div class="work">
+                <img src="jijue-health-pictures/house-to-house-outreach-1.webp" width="400" height="400" alt="House-to-house outreach programme" loading="lazy">
+                <img src="jijue-health-pictures/house-to-house-outreach-2.webp" width="400" height="400" alt="House-to-house outreach programme" loading="lazy">
+                <p><i><b>Our house-to-house outreach programme</b></i></p>
+            </div>
+            <div class="work">
+                <img src="jijue-health-pictures/community-outreach-1.webp" width="400" height="400" alt="Community outreach programme" loading="lazy">
+                <img src="jijue-health-pictures/community-outreach-2.webp" width="400" height="400" alt="Community outreach programme" loading="lazy">
+                <p><i><b>Our volunteers during a community outreach programme</b></i></p>
+            </div>
+            <div class="work">
+                <img src="jijue-health-pictures/distribution-sanitary-pads.webp" width="400" height="400" alt="Distribution of sanitary pads, menstrual cups, and condoms" loading="lazy">
+                <p><i><b>Distribution of sanitary pads, menstrual cups, and condoms during our house-to-house outreach</b></i></p>
+            </div>
+            <div class="work">
+                <img src="jijue-health-pictures/distribution-condoms.webp" width="400" height="400" alt="Distribution of condoms" loading="lazy">
+                <p><i><b>Distribution of condoms in the community</b></i></p>
+            </div>
+            <div class="work">
+                <img src="jijue-health-pictures/srhr-education-session.webp" width="400" height="400" alt="Youth attendee during SRHR education session" loading="lazy">
+                <p><i><b>Our youth attendee during our SRHR education session</b></i></p>
+            </div>
+        </div>
+
+        <!-- Services Slide -->
+        <div id="services" class="slide">
+            <h2>SERVICES</h2>
+            <p><strong>SRHR Education:</strong> Articles, FAQs, videos, and guides.</p>
+            <img src="jijue-health-pictures/condom-demo.webp" width="400" height="400" alt="Demonstration on the proper use of condoms" loading="lazy">
+            <p><i>Demonstration on the proper use of condoms during our community outreach programme</i></p>
+            <img src="jijue-health-pictures/srhr-education-session.webp" width="300" height="300" alt="Youth attendee during SRHR education session" loading="lazy">
+            <p><i>Our youth attendee during our SRHR education session</i></p>
+            <p><strong>Confidential Consultations:</strong> Book virtual consultations with trained health workers.</p>
+            <p><strong>Partnership Services:</strong> Access partner pharmacies for private advice or testing.</p>
+            <p><strong>Community Outreach Programs:</strong> Schedule and locations of workshops.</p>
+        </div>
+
+        <!-- Products Slide -->
+        <div id="products" class="slide">
+            <h2>PRODUCTS</h2>
+            <p><strong>Contraceptives:</strong> Pills, condoms, IUDs.</p>
+            <p><strong>Menstrual Hygiene Products:</strong> Pads, cups, tampons.</p>
+            <p><strong>STI Test Kits:</strong> Available for purchase.</p>
+            <p><strong>Fertility Monitoring Tools:</strong> Tools to help monitor fertility.</p>
+        </div>
+
+        <!-- Volunteer Slide -->
+        <div id="volunteer" class="slide">
+            <h2>JOIN US</h2>
+            <p>Become a volunteer and help us empower young people in urban slums with SRHR education and services.</p>
+        </div>
+
+        <!-- Contact and Social Media Slide -->
+        <div id="contact Us" class="slide">
+            <h2>Contact Us</h2>
+            <p><strong>Email:</strong> tracyatieno570@gmail.com, vivianabung1980@gmail.com</p>
+            <p><strong>Phone:</strong> +254 700 000 000</p>
+            <p><strong>Social Media:</strong></p>
+            <p>
+                <a href="https://facebook.com/jijuehealth" target="_blank">Facebook</a> |
+                <a href="https://instagram.com/jijuehealth" target="_blank">Instagram</a> |
+                <a href="https://x.com/jijuehealth" target="_blank">X</a> |
+                <a href="https://wa.me/254700000000" target="_blank">WhatsApp</a>
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
