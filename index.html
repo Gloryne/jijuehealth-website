@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,357 +8,1152 @@
     <style>
         /* General Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Didact Gothic', 'Times New Roman', sans-serif;
             margin: 0;
             padding: 0;
             color: #333;
-            text-align: center;
-            overflow: hidden;
+            background-color: #fff;
         }
 
-        /* Navigation Menu at the Top */
+        /* Vibrant Maroon Color Theme */
+        :root {
+            --maroon: #9E0031;
+            /* More vibrant maroon */
+            --maroon-dark: #7A0026;
+            --maroon-light: #C40042;
+            --white: #ffffff;
+            --off-white: #FFF5F8;
+            --text-on-maroon: #ffffff;
+        }
+
+        /* Navigation Menu */
         #navigation {
-            position: fixed;
+            position: sticky;
             top: 0;
-            left: 0;
             width: 100%;
-            height: auto;
             display: flex;
-            flex-direction: row;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            background-image: url('media/navigation-bg.jpg');
-            background-size: cover;
-            background-position: center;
-            z-index: 999;
-            padding: 10px 20px;
+            background-color: var(--maroon);
+            padding: 15px 5%;
             box-sizing: border-box;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
 
-        #navigation h1 {
+        .logo {
+            color: var(--text-on-maroon);
             font-size: 24px;
-            color: #fff;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px;
-            border-radius: 5px;
-            margin-right: 20px;
-        }
-
-        #navigation .nav-links {
-            display: flex;
-            flex-direction: row;
-            gap: 10px;
-        }
-
-        #navigation .nav-links a {
+            font-weight: bold;
             text-decoration: none;
-            color: #333;
-            padding: 10px 15px;
-            border-radius: 15px;
-            background-color: rgba(255, 255, 255, 0.8);
-            transition: background-color 0.3s ease;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: var(--text-on-maroon);
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s;
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+
+        .nav-links a:hover {
+            background-color: var(--maroon-light);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--maroon);
+            padding: 120px 5% 100px;
             text-align: center;
-        }
-
-        #navigation .nav-links a:hover {
-            background-color: #ffcc00;
-        }
-
-        /* Slideshow Container */
-        .slideshow {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            overflow: hidden;
+            color: var(--text-on-maroon);
             position: relative;
+            background-image: linear-gradient(135deg, var(--maroon-dark), var(--maroon-light));
         }
 
-        /* Individual Slides */
-        .slide {
-            width: 100%;
-            height: 100vh;
-            flex: 0 0 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            padding: 20px;
-            box-sizing: border-box;
-            background-size: cover;
-            background-position: center;
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .tagline {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            line-height: 1.2;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--text-on-maroon);
+            color: var(--maroon);
+            padding: 15px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 20px 10px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border: 2px solid var(--text-on-maroon);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
+            background-color: transparent;
+            color: var(--text-on-maroon);
+        }
+
+        /* Mission/Vision Section */
+        .mission-vision {
+            padding: 80px 5%;
+            text-align: center;
+            background-color: var(--off-white);
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            color: var(--maroon);
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--maroon);
+        }
+
+        .mission,
+        .vision {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            padding: 40px;
+            background-color: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mission:before,
+        .vision:before {
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-            overflow-y: auto;
+            width: 5px;
+            height: 100%;
+            background-color: var(--maroon);
         }
 
-        .slide:target {
-            opacity: 1;
-            z-index: 1;
+        /* Service Cards */
+        .services {
+            padding: 100px 5%;
+            text-align: center;
+            background-color: var(--maroon);
+            color: var(--text-on-maroon);
+            background-image: linear-gradient(135deg, var(--maroon-dark), var(--maroon-light));
         }
 
-        .slide p {
-            font-size: 18px;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 10px auto;
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 10px;
-            border-radius: 5px;
-            text-align: justify;
+        .services .section-title {
+            color: var(--text-on-maroon);
         }
 
-        .work, .profile {
+        .services .section-title:after {
+            background-color: var(--text-on-maroon);
+        }
+
+        .cards-container {
             display: flex;
-            align-items: flex-start;
-            margin-bottom: 20px;
-            text-align: left;
-            width: 100%;
-            max-width: 800px;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 60px;
         }
 
-        .work img, .profile img {
-            width: 200px;
-            height: 200px;
-            margin-right: 20px;
+        .card {
+            background-color: var(--white);
             border-radius: 10px;
+            padding: 40px 30px;
+            width: 300px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: all 0.4s;
+            color: #333;
+        }
+
+        .card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-title {
+            color: var(--maroon);
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .card-button {
+            display: inline-block;
+            background-color: var(--maroon);
+            color: var(--white);
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            margin-top: 25px;
+            transition: all 0.3s;
+            font-weight: bold;
+            border: 2px solid var(--maroon);
+        }
+
+        .card-button:hover {
+            background-color: transparent;
+            color: var(--maroon);
+            border-color: var(--maroon);
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 5%;
+            text-align: center;
+            background-color: var(--off-white);
+        }
+
+        .team-members {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .team-member {
+            width: 280px;
+            margin-bottom: 40px;
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 3px solid var(--maroon);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .member-name {
+            font-weight: bold;
+            color: var(--maroon);
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+
+        .member-role {
+            font-style: italic;
+            margin-bottom: 15px;
+            color: var(--maroon-dark);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 5%;
+            text-align: center;
+            background-color: var(--maroon);
+            color: var(--text-on-maroon);
+            background-image: linear-gradient(135deg, var(--maroon-dark), var(--maroon-light));
+        }
+
+        .contact .section-title {
+            color: var(--text-on-maroon);
+        }
+
+        .contact .section-title:after {
+            background-color: var(--text-on-maroon);
+        }
+
+        .contact-options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .contact-option {
+            width: 250px;
+            padding: 40px 30px;
+            background-color: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            color: #333;
+            transition: all 0.3s;
+        }
+
+        .contact-option:hover {
+            transform: translateY(-10px);
+        }
+
+        .contact-option h3 {
+            color: var(--maroon);
+            font-size: 1.4rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--maroon-dark);
+            color: var(--text-on-maroon);
+            padding: 60px 5% 40px;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .footer-links,
+        .footer-social {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .footer-links a,
+        .footer-social a {
+            color: var(--text-on-maroon);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .footer-links a:hover,
+        .footer-social a:hover {
+            color: #ffccd5;
+            transform: translateX(5px);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: var(--text-on-maroon);
+            color: var(--maroon);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .social-icons a:hover {
+            background-color: var(--maroon-light);
+            color: var(--text-on-maroon);
+            transform: scale(1.1);
+        }
+
+        /* New styles for product images */
+        .product-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .product-card {
+            width: 280px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
             object-fit: cover;
         }
 
-        .work p, .profile p {
-            flex: 1;
-            margin: 0;
+        .product-info {
+            padding: 15px;
         }
 
-        .slide iframe {
-            width: 90%;
-            height: 500px;
+        .product-title {
+            font-weight: bold;
+            color: var(--maroon);
+            margin-bottom: 5px;
+        }
+
+        .product-price {
+            color: var(--maroon-dark);
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .select-product-btn {
+            display: block;
+            background-color: var(--maroon);
+            color: white;
+            text-align: center;
+            padding: 8px 0;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .select-product-btn:hover {
+            background-color: var(--maroon-dark);
+        }
+
+        /* Image upload preview */
+        .image-preview-container {
             margin: 20px 0;
-            border-radius: 10px;
-            border: none;
+            text-align: center;
         }
 
+        .image-preview {
+            max-width: 200px;
+            max-height: 200px;
+            display: none;
+            margin: 10px auto;
+            border-radius: 5px;
+            border: 2px dashed var(--maroon);
+        }
+
+        .upload-label {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--maroon-light);
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .upload-label:hover {
+            background-color: var(--maroon);
+        }
+
+        #imageUpload {
+            display: none;
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
             #navigation {
                 flex-direction: column;
-                padding: 10px;
+                padding: 15px;
             }
 
-            #navigation h1 {
-                font-size: 20px;
-                margin-right: 0;
-                margin-bottom: 10px;
+            .nav-links {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
             }
 
-            #navigation .nav-links {
-                flex-direction: column;
-                gap: 5px;
-            }
-
-            #navigation .nav-links a {
-                padding: 8px 12px;
+            .nav-links a {
+                padding: 6px 12px;
                 font-size: 14px;
             }
 
-            .slide h1, .slide h2 {
-                font-size: 24px;
+            .tagline {
+                font-size: 2rem;
             }
 
-            .slide p {
-                font-size: 16px;
-            }
-
-            .work, .profile {
+            .cards-container,
+            .contact-options {
                 flex-direction: column;
+                align-items: center;
+                gap: 30px;
+            }
+
+            .card,
+            .contact-option {
+                width: 100%;
+                max-width: 350px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 40px;
                 text-align: center;
             }
 
-            .work img, .profile img {
-                margin-right: 0;
-                margin-bottom: 10px;
+            .footer-links,
+            .footer-social {
+                align-items: center;
             }
 
-            .slide iframe {
+            .product-gallery {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .product-card {
                 width: 100%;
-                height: 300px;
+                max-width: 300px;
             }
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
 
-    <!-- Navigation Menu at the Top -->
-    <div id="navigation">
-        <h1>JIJUE HEALTH</h1>
+<body>
+    <!-- Navigation Menu -->
+    <nav id="navigation">
+        <a href="#home" class="logo">JijueHealth</a>
         <div class="nav-links">
             <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#founder">Founders</a>
-            <a href="#student-volunteers">Student Volunteers</a>
-            <a href="#health-volunteers">Health Volunteers</a>
-            <a href="#Our Works">Our Works</a>
-            <a href="#services">Services</a>
-            <a href="#products">Products</a>
-            <a href="#volunteer">Join Us</a>
-            <a href="#contact Us">Contact Us</a>
+            <a href="#education">Education</a>
+            <a href="#support">Support</a>
+            <a href="#essentials">Essentials</a>
+            <a href="#about">About Us</a>
         </div>
-    </div>
+    </nav>
 
-    <!-- Slideshow Container -->
-    <div class="slideshow">
-        <!-- Homepage Slide -->
-        <div id="home" class="slide">
-            <h1>JIJUE HEALTH</h1>
-            <p> "HEALTH WITHOUT LIMITS, CARE WITHOUT STIGMA"</p>
-            <img src="jijue-health-pictures/homepage-image.webp" width="400" height="400" alt="Homepage Picture" loading="lazy">
-            <p><strong>Mission:</strong> To empower adolescents and young adults in urban slums by providing access to comprehensive Sexual and Reproductive Health and Rights (SRHR) education and services.</p>
-            <p><strong>Vision:</strong> A world where every young person has equitable access to SRHR knowledge and services, free from stigma and barriers.</p>
-            <p><strong>Services:</strong> SRHR education, confidential support, and access to essential products for young people in urban slums.</p>
-            <!-- Video Embed for Home Slide -->
-            <iframe src="https://drive.google.com/file/d/1_SBK0ZZmZCDNntV4clhi6szqmNMSZN5c/preview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="tagline">Health Without Limits,<br>Care Without Stigma.</h1>
+            <a href="#services" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Mission/Vision Section -->
+    <section class="mission-vision">
+        <h2 class="section-title">Our Purpose</h2>
+        <div class="mission">
+            <h2>Our Mission</h2>
+            <p>To empower adolescents and young adults in urban areas by providing access to comprehensive sexual and
+                Reproductive Health and rights(SRHR) education and services.</p>
+        </div>
+        <div class="vision">
+            <h2>Our Vision</h2>
+            <p>A world where every young person has equitable access to SRHR knowledge and services, free from stigma
+                and barriers.</p>
+            <a href="#about" class="cta-button"
+                style="background-color: var(--maroon); color: var(--white); border-color: var(--maroon);">Learn
+                More</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2 class="section-title">Our Services</h2>
+        <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">JijueHealth offers SRHR education, confidential
+            support, and access to essential products for young people in urban slums.</p>
+
+        <div class="cards-container">
+            <div class="card">
+                <h3 class="card-title">Learn Your Rights</h3>
+                <p>SRHR workshops and resources.</p>
+                <a href="#education" class="card-button">Explore</a>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Talk Confidentially</h3>
+                <p>Safe, private support.</p>
+                <a href="#support" class="card-button">Reach Out</a>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Get Essentials</h3>
+                <p>Access pads, contraceptives, and more.</p>
+                <a href="#essentials" class="card-button">Find Out How</a>
+            </div>
         </div>
 
-        <!-- About Us Slide -->
-        <div id="about" class="slide">
-            <h2>ABOUT US</h2>
-            <p><strong>Mission Statement:</strong> Our mission is to bridge the gap in access to quality SRHR education and services for adolescents and young adults, aged 13-25, living in Kenya's urban slums.</p>
-            <p><strong>Vision Statement:</strong> Our vision is to create a future where all adolescents and young adults, regardless of their socio-economic background, can access the information, tools, and support needed to lead healthy, empowered lives.</p>
-            <!-- Video Embed for About Us Slide -->
-            <iframe src="https://drive.google.com/file/d/1kMeZmSNpCbaje83Rh5YcuG4nMDpxh2L-/preview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <!-- JavaScript -->
+         <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const orderForm = document.getElementById('orderForm');
+            const productSelectButtons = document.querySelectorAll('.select-product-btn');
+            const selectedProductDisplay = document.getElementById('selectedProductDisplay');
+            const noProductSelected = document.getElementById('noProductSelected');
+            const selectedProductName = document.getElementById('selectedProductName');
+            const selectedProductPrice = document.getElementById('selectedProductPrice');
+            const productInput = document.getElementById('product');
+            const productPriceInput = document.getElementById('productPrice');
+            const imageUpload = document.getElementById('imageUpload');
+            const imagePreview = document.getElementById('imagePreview');
+            
+            // Handle product selection
+            productSelectButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const product = this.getAttribute('data-product');
+                    const price = this.getAttribute('data-price');
+                    const productName = this.parentElement.querySelector('.product-title').textContent;
+                    const priceText = this.parentElement.querySelector('.product-price').textContent.match(/GHS (\d+)/)[1];
+                    
+                    // Update form
+                    productInput.value = product;
+                    productPriceInput.value = price;
+                    selectedProductName.textContent = productName;
+                    selectedProductPrice.textContent = priceText;
+                    
+                    // Show selected product
+                    selectedProductDisplay.style.display = 'block';
+                    noProductSelected.style.display = 'none';
+                    
+                    // Scroll to form
+                    document.getElementById('orderFormContainer').scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+            
+            // Handle image upload preview
+            imageUpload.addEventListener('change', function() {
+                const file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        imagePreview.src = e.target.result;
+                        imagePreview.style.display = 'block';
+                    }
+                    reader.readAsDataURL(file);
+                }
+            });
+            
+            // Phone validation function
+            function isValidPhoneNumber(phone) {
+                // Kenyan number: starts with 254 (12 digits total)
+                // Ghanaian number: starts with 0 (10 digits) or 233 (12 digits)
+                const kenyanRegex = /^254\d{9}$/;
+                const ghanaianRegex1 = /^0\d{9}$/;
+                const ghanaianRegex2 = /^233\d{9}$/;
+                
+                return kenyanRegex.test(phone) || 
+                       ghanaianRegex1.test(phone) || 
+                       ghanaianRegex2.test(phone);
+            }
+
+            function formatPhoneNumber(phone) {
+                // Remove all non-digit characters
+                phone = phone.replace(/\D/g, '');
+                
+                // If Kenyan number (254...), leave as is
+                if (phone.startsWith('254')) {
+                    return phone;
+                }
+                
+                // Convert Ghanaian numbers to 233 format
+                if (phone.startsWith('0')) {
+                    return '233' + phone.substring(1);
+                }
+                
+                // If already in 233 format, return as is
+                return phone;
+            }
+            
+            // Handle form submission
+            if (orderForm) {
+                orderForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form values
+                    const product = productInput.value;
+                    const quantity = document.getElementById('quantity').value;
+                    const delivery = document.getElementById('delivery').value;
+                    const phone = document.getElementById('phone').value.replace(/\D/g, '');
+                    const location = document.getElementById('location').value;
+                    
+                    // Validate form
+                    if (!product) {
+                        alert('Please select a product first');
+                        return;
+                    }
+                    
+                    if (!isValidPhoneNumber(phone)) {
+                        alert('Please enter a valid Kenyan (+254...) or Ghanaian (0...) phone number');
+                        return;
+                    }
+                    
+                    // Format phone number for WhatsApp
+                    const formattedPhone = formatPhoneNumber(phone);
+                    
+                    // Calculate total
+                    const price = parseFloat(productPriceInput.value);
+                    let total = price * quantity;
+                    if (delivery === 'delivery') {
+                        total += 10; // GHS 10 delivery fee
+                    }
+                    
+                    // Format WhatsApp message
+                    const productName = selectedProductName.textContent;
+                    const deliveryMethod = delivery === 'delivery' ? 'Discreet Delivery' : 'Pharmacy Pickup';
+                    
+                    let whatsappMessage = `Hello JijueHealth,\n\nI would like to order:\n\n*Product:* ${productName}\n*Quantity:* ${quantity}\n*Delivery Method:* ${deliveryMethod}\n`;
+                    
+                    if (delivery === 'delivery' && location) {
+                        whatsappMessage += `*Delivery Location:* ${location}\n`;
+                    }
+                    
+                    whatsappMessage += `*Delivery Fee:* GHS 10\n`;
+                    whatsappMessage += `*Total Amount:* GHS ${total.toFixed(2)}\n\n`;
+                    whatsappMessage += `My phone number is ${phone}.\n\nPlease provide payment details.`;
+                    
+                    // Include image if uploaded
+                    let whatsappUrl;
+                    if (imageUpload.files.length > 0) {
+                        whatsappMessage += `\n\nI've attached an image of the product I need.`;
+                        whatsappUrl = `https://wa.me/233206431143?text=${whatsappMessage}`;
+                    } else {
+                        whatsappUrl = `https://wa.me/233206431143?text=${whatsappMessage}`;
+                    }
+                    
+                    // Try to open WhatsApp
+                    try {
+                        window.open(whatsappUrl, '_blank');
+                        
+                        // Show confirmation message
+                        const confirmation = `
+                            <div style="text-align: center; padding: 20px;">
+                                <div style="font-size: 3rem; color: #25D366; margin-bottom: 20px;">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <h3 style="color: var(--maroon); margin-bottom: 15px;">Order Received!</h3>
+                                <p>We've opened WhatsApp for you to complete your payment.</p>
+                                ${imageUpload.files.length > 0 ? '<p>Please send the product image in your WhatsApp chat.</p>' : ''}
+                                <p>If you weren't redirected, please <a href="${whatsappUrl}" target="_blank" style="color: var(--maroon); font-weight: bold;">click here</a>.</p>
+                                <p>Our team will guide you through the payment and delivery process.</p>
+                                <button onclick="window.location.reload()" class="card-button" style="margin-top: 30px;">
+                                    <i class="fas fa-plus" style="margin-right: 8px;"></i> Place Another Order
+                                </button>
+                            </div>
+                        `;
+                        
+                        // Replace form with confirmation
+                        document.querySelector('#orderFormContainer').innerHTML = confirmation;
+                    } catch (e) {
+                        alert('Could not open WhatsApp. Please ensure you have WhatsApp installed or contact us directly.');
+                    }
+                });
+            }
+        });
+    </script>
+
+    </section>
+
+
+    <!-- Education Section -->
+    <section id="education" class="about">
+        <h2 class="section-title">Learn Your Rights</h2>
+        <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 40px;">We offer workshops, online guides, and
+            resources on Sexual and Reproductive Health and Rights—tailored for you.</p>
+
+        <div style="max-width: 800px; margin: 40px auto;">
+            <iframe width="100%" height="450"
+                src="https://drive.google.com/file/d/1_SBK0ZZmZCDNntV4clhi6szqmNMSZN5c/preview" frameborder="0"
+                allowfullscreen></iframe>
         </div>
 
-        <!-- Founders Slide -->
-        <div id="founder" class="slide">
-            <h2>FOUNDER</h2>
-            <img src="jijue-health-pictures/tracy-achieng.webp" width="200" height="200" alt="Tracy Atieno Achieng" loading="lazy">
-            <p><strong>Tracy Atieno Achieng</strong> - Founder, Mechanical Engineering Student at Ashesi University.</p>
-            <p><strong>Bio:</strong> Tracy is a passionate advocate for youth empowerment and healthcare accessibility, with a strong commitment to breaking barriers in Sexual and Reproductive Health and Rights (SRHR).</p>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <ul style="display: inline-block; text-align: left; font-size: 1.1rem;">
+                <li>Understand your body.</li>
+                <li>Know your rights.</li>
+                <li>Break the stigma.</li>
+            </ul>
         </div>
+    </section>
 
-        <!-- Student Volunteers Slide -->
-        <div id="student-volunteers" class="slide">
-            <h2>STUDENT VOLUNTEERS</h2>
-            <div class="profiles">
-                <div class="profile">
-                    <img src="jijue-health-pictures/maureen-kazira.webp" width="100" height="100" alt="Maureen Kazira" loading="lazy">
-                    <p><strong>Maureen Kazira</strong> - Health Sciences and Public Health Student at Kenyatta University.</p>
-                    <p><strong>Bio:</strong> Maureen is passionate about improving healthcare systems and enjoys combining academic knowledge with interests in research, project management, and health economics.</p>
+    <!-- Support Section -->
+    <section id="support" class="services">
+        <h2 class="section-title">Talk Confidentially</h2>
+        <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">You're not alone—we're here to listen.</p>
+
+        <div class="cards-container">
+            <div class="card">
+                <h3 class="card-title">Get Support</h3>
+                <p>Get private, judgment-free support through counseling, Q&A, or chat.</p>
+                <ul style="text-align: left; margin: 20px 0; padding-left: 20px;">
+                    <li>Ask anything.</li>
+                    <li>Stay anonymous.</li>
+                    <li>Feel supported.</li>
+                </ul>
+                <a href="#contact" class="card-button">Start a Chat</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Essentials Section -->
+    <section id="essentials" class="about">
+        <h2 class="section-title">Get Essentials</h2>
+        <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 40px;">Health products, delivered with care.</p>
+
+        <!-- Product Gallery -->
+        <div class="product-gallery">
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200?text=Sanitary+Pads" alt="Sanitary Pads" class="product-image">
+                <div class="product-info">
+                    <div class="product-title">Sanitary Pads</div>
+                    <div class="product-price">GHS 15 (Pack of 10)</div>
+                    <a href="#" class="select-product-btn" data-product="sanitary_pads" data-price="15">Select
+                        Product</a>
                 </div>
-                <div class="profile">
-                    <img src="jijue-health-pictures/jazmine-achieng.webp" width="100" height="100" alt="Jazmine Achieng" loading="lazy">
-                    <p><strong>Jazmine Achieng</strong> - Perioperative Theatre Nurse/Tech Student at Tricent Medical College.</p>
-                    <p><strong>Bio:</strong> Jazmine is committed to bridging the gap between healthcare providers and young people, ensuring they receive accurate, non-judgmental information and access to essential SRHR services.</p>
-                </div>
-                <div class="profile">
-                    <img src="jijue-health-pictures/baria-mohammed.webp" width="100" height="100" alt="Baria Mohammed" loading="lazy">
-                    <p><strong>Baria Mohammed</strong> - Student at Nairobits studying Graphic and Design.</p>
-                    <p><strong>Bio:</strong> Baria is dedicated to fostering open, stigma-free conversations around SRHR, ensuring that youth receive the information and services they need to make informed health decisions.</p>
+            </div>
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200?text=Condoms" alt="Condoms" class="product-image">
+                <div class="product-info">
+                    <div class="product-title">Condoms</div>
+                    <div class="product-price">GHS 10 (Pack of 12)</div>
+                    <a href="#" class="select-product-btn" data-product="condoms" data-price="10">Select Product</a>
                 </div>
             </div>
-        </div>
 
-        <!-- Health Volunteers Slide -->
-        <div id="health-volunteers" class="slide">
-            <h2>HEALTH VOLUNTEERS</h2>
-            <div class="profiles">
-                <div class="profile">
-                    <img src="jijue-health-pictures/diane-moitie.webp" width="100" height="100" alt="Diane Moitie" loading="lazy">
-                    <p><strong>Diane Moitie</strong> - Community Health Worker.</p>
-                    <p><strong>Bio:</strong> Diane is an advocate for accessible and youth-friendly healthcare services. She helps young people overcome stigma and fear, making it easier for them to make informed health decisions.</p>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200?text=Contraceptive+Pills" alt="Contraceptive Pills" class="product-image">
+                <div class="product-info">
+                    <div class="product-title">Contraceptive Pills</div>
+                    <div class="product-price">GHS 25 (1 month supply)</div>
+                    <a href="#" class="select-product-btn" data-product="contraceptive_pills" data-price="25">Select
+                        Product</a>
                 </div>
-                <div class="profile">
-                    <img src="jijue-health-pictures/dorothy-nyanchoka.webp" width="100" height="100" alt="Dorothy Nyanchoka" loading="lazy">
-                    <p><strong>Dorothy Nyanchoka</strong> - Community Health Worker.</p>
-                    <p><strong>Bio:</strong> Dorothy is passionate about breaking barriers to healthcare in marginalized communities. With extensive experience in public health, she supports in delivering educational sessions, engaging with young people, and strengthening partnerships with local pharmacies and health providers.</p>
-                </div>
-                <div class="profile">
-                    <img src="jijue-health-pictures/caroline-teresa-otieno.webp" width="100" height="100" alt="Caroline Teresa Otieno" loading="lazy">
-                    <p><strong>Caroline Teresa Otieno</strong> - Community Health Worker.</p>
-                    <p><strong>Bio:</strong> Caroline believes in the power of education to transform lives. She works closely with adolescents and young adults to provide them with the knowledge and resources they need to make informed choices about their sexual and reproductive health.</p>
-                </div>
-                <div class="profile">
-                    <img src="jijue-health-pictures/vivian-achieng.webp" width="100" height="100" alt="Vivian Achieng" loading="lazy">
-                    <p><strong>Vivian Achieng</strong> - Community Health Worker.</p>
-                    <p><strong>Bio:</strong> With a deep passion and experience in empowering young people with Sexual and Reproductive Health and Rights (SRHR) education in urban slums, she understands the challenges that adolescents and young adults face in accessing healthcare.</p>
+            </div>
+
+            <div class="product-card">
+                <img src="https://Ashesi_jijueHealth.pdf/300x200?text=Pregnancy+Test" alt="Pregnancy Test" class="product-image">
+                <div class="product-info">
+                    <div class="product-title">Pregnancy Test Kit</div>
+                    <div class="product-price">GHS 8 each</div>
+                    <a href="#" class="select-product-btn" data-product="pregnancy_test" data-price="8">Select
+                        Product</a>
                 </div>
             </div>
         </div>
 
-        <!-- Our Works Slide -->
-        <div id="Our Works" class="slide">
-            <h2>OUR WORKS</h2>
-            <div class="work">
-                <img src="jijue-health-pictures/menstrual-cup-demo.webp" width="400" height="400" alt="Demonstration of the use of menstrual cups" loading="lazy">
-                <p><i><b>Demonstration of the use of menstrual cups during our community outreach programme</b></i></p>
-            </div>
-            <div class="work">
-                <img src="jijue-health-pictures/house-to-house-outreach-1.webp" width="400" height="400" alt="House-to-house outreach programme" loading="lazy">
-                <img src="jijue-health-pictures/house-to-house-outreach-2.webp" width="400" height="400" alt="House-to-house outreach programme" loading="lazy">
-                <p><i><b>Our house-to-house outreach programme</b></i></p>
-            </div>
-            <div class="work">
-                <img src="jijue-health-pictures/community-outreach-1.webp" width="400" height="400" alt="Community outreach programme" loading="lazy">
-                <img src="jijue-health-pictures/community-outreach-2.webp" width="400" height="400" alt="Community outreach programme" loading="lazy">
-                <p><i><b>Our volunteers during a community outreach programme</b></i></p>
-            </div>
-            <div class="work">
-                <img src="jijue-health-pictures/distribution-sanitary-pads.webp" width="400" height="400" alt="Distribution of sanitary pads, menstrual cups, and condoms" loading="lazy">
-                <p><i><b>Distribution of sanitary pads, menstrual cups, and condoms during our house-to-house outreach</b></i></p>
-            </div>
-            <div class="work">
-                <img src="jijue-health-pictures/distribution-condoms.webp" width="400" height="400" alt="Distribution of condoms" loading="lazy">
-                <p><i><b>Distribution of condoms in the community</b></i></p>
-            </div>
-            <div class="work">
-                <img src="jijue-health-pictures/srhr-education-session.webp" width="400" height="400" alt="Youth attendee during SRHR education session" loading="lazy">
-                <p><i><b>Our youth attendee during our SRHR education session</b></i></p>
+        <!-- Order Form -->
+        <div class="card" style="max-width: 600px; margin: 30px auto;" id="orderFormContainer">
+            <form id="orderForm" style="margin-top: 20px;">
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: bold;">Selected Product</label>
+                    <div id="selectedProductDisplay" style="padding: 10px; background-color: #f5f5f5; border-radius: 5px; margin-bottom: 15px; display: none;">
+                        <span id="selectedProductName"></span> - GHS <span id="selectedProductPrice"></span>
+                        <input type="hidden" id="product" name="product">
+                        <input type="hidden" id="productPrice" name="productPrice">
+                    </div>
+                    <p id="noProductSelected" style="color: #666; font-style: italic;">Please select a product from above</p>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <label for="quantity" style="display: block; margin-bottom: 8px; font-weight: bold;">Quantity</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+                </div>
+
+                <!-- Delivery Fee Notice -->
+                <div style="margin-bottom: 20px; background-color: #FFF5F8; padding: 10px; border-radius: 5px;">
+                    <p style="color: var(--maroon); margin: 0;">
+                        <i class="fas fa-truck" style="margin-right: 8px;"></i> 
+                        Delivery fee: <strong>GHS 10</strong> (all areas)
+                    </p>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <label for="delivery" style="display: block; margin-bottom: 8px; font-weight: bold;">Delivery Method</label>
+                    <select id="delivery" name="delivery" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+                        <option value="pickup">Pickup at Partner Pharmacy (Free)</option>
+                        <option value="delivery">Discreet Delivery (+GHS 10)</option>
+                    </select>
+                </div>
+
+                <!-- Updated Phone Number Field -->
+                <div style="margin-bottom: 20px;">
+                    <label for="phone" style="display: block; margin-bottom: 8px; font-weight: bold;">
+                        WhatsApp Number (Kenya or Ghana)
+                    </label>
+                    <input type="tel" id="phone" name="phone" 
+                           placeholder="e.g., 254712345678 (Kenya) or 0201234567 (Ghana)" 
+                           required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+                    <p style="font-size: 0.8rem; color: #666; margin-top: 5px;">
+                        Enter with country code for Kenya (254) or without for Ghana
+                    </p>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <label for="location" style="display: block; margin-bottom: 8px; font-weight: bold;">Delivery Location (if applicable)</label>
+                    <input type="text" id="location" name="location" placeholder="Nearest landmark or area" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: bold;">Upload Product Image (Optional)</label>
+                    <label for="imageUpload" class="upload-label">
+                        <i class="fas fa-upload" style="margin-right: 8px;"></i> Choose Image
+                    </label>
+                    <input type="file" id="imageUpload" name="imageUpload" accept="image/*">
+                    <div class="image-preview-container">
+                        <img id="imagePreview" class="image-preview" alt="Image Preview">
+                    </div>
+                </div>
+
+                <button type="submit" class="card-button" style="width: 100%; border: none; cursor: pointer; font-size: 1.1rem;">
+                    <i class="fab fa-whatsapp" style="margin-right: 8px;"></i> Place Order & Pay via WhatsApp
+                </button>
+
+                <p style="font-size: 0.9rem; margin-top: 20px; color: #666;">
+                    After submitting, you'll be redirected to WhatsApp to complete your payment securely.
+                </p>
+            </form>
+        </div>
+
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2 class="section-title">About JijueHealth</h2>
+
+        <div style="max-width: 800px; margin: 0 auto 60px;">
+            <h3 style="color: var(--maroon); margin-top: 30px;">Our Detailed Mission</h3>
+            <p style="text-align: left;">Our mission is to bridge the gap in access to quality SRHR education and
+                services for adolescents and young adults, aged 13–25, living in Kenya's urban areas. We aim to address
+                stigma, shyness, and misinformation by offering innovative solutions that prioritize privacy,
+                inclusivity, and community engagement. Through partnerships with pharmacies, on-ground initiatives, and
+                a digital platform, JijueHealth empowers individuals to make informed decisions about their health and
+                well-being.</p>
+
+            <h3 style="color: var(--maroon); margin-top: 30px;">Our Detailed Vision</h3>
+            <p style="text-align: left;">Our vision is to create a future where all adolescents and young adults,
+                regardless of their socio-economic background, can access the information, tools, and support needed to
+                lead healthy, empowered lives. By fostering an environment of inclusivity, trust, and innovation, we
+                envision a society where SRHR is normalized, stigma is eradicated, and young people have the confidence
+                to take charge of their reproductive health.</p>
+
+            <h3 style="color: var(--maroon); margin-top: 30px;">Our Services</h3>
+            <ul style="text-align: left;">
+                <li><strong>SRHR Education:</strong> We provide interactive and culturally relevant learning materials
+                    through our digital platform and on-ground workshops to increase awareness and knowledge.</li>
+                <li><strong>Access to Services:</strong> Partnering with local pharmacies, we offer private and
+                    youth-friendly SRHR services, including testing, consultations, and advice.</li>
+                <li><strong>Essential Products:</strong> We make SRHR-related products accessible and affordable,
+                    including contraceptives, menstrual hygiene products, STI test kits, and fertility monitoring tools.
+                </li>
+                <li><strong>Community Support:</strong> Our trained volunteers provide mentorship and guidance tailored
+                    to the unique challenges faced by our target audience.</li>
+                <li><strong>Digital Platform:</strong> Our online portal connects users with service providers and
+                    offers resources for self-learning, ensuring privacy and convenience.</li>
+            </ul>
+
+            <div style="margin: 50px 0; text-align: center;">
+                <a href="#services" class="cta-button"
+                    style="background-color: var(--maroon); color: var(--white); border-color: var(--maroon); margin-right: 15px; margin-bottom: 15px;">Access
+                    Services</a>
+                <a href="#essentials" class="cta-button"
+                    style="background-color: var(--maroon); color: var(--white); border-color: var(--maroon); margin-right: 15px; margin-bottom: 15px;">Shop
+                    Now</a>
+                <a href="#contact" class="cta-button"
+                    style="background-color: var(--maroon); color: var(--white); border-color: var(--maroon);">Join
+                    Us</a>
             </div>
         </div>
 
-        <!-- Services Slide -->
-        <div id="services" class="slide">
-            <h2>SERVICES</h2>
-            <p><strong>SRHR Education:</strong> Articles, FAQs, videos, and guides.</p>
-            <img src="jijue-health-pictures/condom-demo.webp" width="400" height="400" alt="Demonstration on the proper use of condoms" loading="lazy">
-            <p><i>Demonstration on the proper use of condoms during our community outreach programme</i></p>
-            <img src="jijue-health-pictures/srhr-education-session.webp" width="300" height="300" alt="Youth attendee during SRHR education session" loading="lazy">
-            <p><i>Our youth attendee during our SRHR education session</i></p>
-            <p><strong>Confidential Consultations:</strong> Book virtual consultations with trained health workers.</p>
-            <p><strong>Partnership Services:</strong> Access partner pharmacies for private advice or testing.</p>
-            <p><strong>Community Outreach Programs:</strong> Schedule and locations of workshops.</p>
+        <h3 class="section-title">Our Team</h3>
+
+        <h4 style="color: var(--maroon); font-size: 1.4rem; margin-bottom: 30px;">Executives</h4>
+        <div class="team-members">
+            <div class="team-member">
+                <img src="jijue health pictures/cctf-100.jpg" alt="Tracy Atieno Achieng">
+                <div class="member-name">Tracy Atieno Achieng</div>
+                <div class="member-role">CEO</div>
+                <p>Mechanical engineering student at Ashesi University. Tracy is a passionate advocate for youth
+                    empowerment and healthcare accessibility.</p>
+            </div>
+            <div class="team-member">
+                <img src="jijue-health-pictures/ines-twishime.webp" alt="Ines Noella Twishime">
+                <div class="member-name">Ines Noella Twishime</div>
+                <div class="member-role">COO</div>
+                <p>Mechanical engineering student at Ashesi University. Ines believes in ensuring that every young
+                    person has access to safe, stigma-free SRHR.</p>
+            </div>
+            <div class="team-member">
+                <img src="jijue health pictures/Glo" alt="Gloryne Nyaera Maisiba">
+                <div class="member-name">Gloryne Nyaera Maisiba</div>
+                <div class="member-role">Developer</div>
+                <p>Mathematics and Computer Science student at JKUAT.Nyaera is determined to use technology to solve
+                    modern day problems in the society.</p>
+            </div>
         </div>
 
-        <!-- Products Slide -->
-        <div id="products" class="slide">
-            <h2>PRODUCTS</h2>
-            <p><strong>Contraceptives:</strong> Pills, condoms, IUDs.</p>
-            <p><strong>Menstrual Hygiene Products:</strong> Pads, cups, tampons.</p>
-            <p><strong>STI Test Kits:</strong> Available for purchase.</p>
-            <p><strong>Fertility Monitoring Tools:</strong> Tools to help monitor fertility.</p>
+        <h4 style="color: var(--maroon); font-size: 1.4rem; margin: 60px 0 30px;">Student Volunteers</h4>
+        <div class="team-members">
+            <div class="team-member">
+                <img src="jijue health pictures/Kazy.jpg" alt="Maureen Kazira">
+                <div class="member-name">Maureen Kazira</div>
+                <p>Health sciences and public health student at Kenyatta University. Passionate about improving
+                    healthcare systems.</p>
+            </div>
+            <div class="team-member">
+                <img src="jijue health pictures/DSC_0387.JPG" alt="Jazmine Achieng">
+                <div class="member-name">Jazmine Achieng</div>
+                <p>Perioperative theatre nurse/tech student at Tricent medical college. Committed to bridging the gap
+                    between healthcare providers and young people.</p>
+            </div>
+            <div class="team-member">
+                <img src="jijue health pictures/DSC_0390.JPG" alt="Baria Mohammed">
+                <div class="member-name">Baria Mohammed</div>
+                <p>Student at Nairobits studying graphic and design. Dedicated to fostering open, stigma-free
+                    conversations around SRHR.</p>
+            </div>
         </div>
 
-        <!-- Volunteer Slide -->
-        <div id="volunteer" class="slide">
-            <h2>JOIN US</h2>
-            <p>Become a volunteer and help us empower young people in urban slums with SRHR education and services.</p>
+        <h4 style="color: var(--maroon); font-size: 1.4rem; margin: 60px 0 30px;">Health Volunteers</h4>
+        <div class="team-members">
+            <div class="team-member">
+                <img src="jijue health pictures/DSC_0389.JPG" alt="Diane Moitie">
+                <div class="member-name">Diane Moitie</div>
+                <p>Community Health Worker. Advocate for accessible and youth-friendly healthcare services.</p>
+            </div>
+            <div class="team-member">
+                <img src="jjijue health pictures/DSC_0388.JPG" alt="Dorothy Nyanchoka">
+                <div class="member-name">Dorothy Nyanchoka</div>
+                <p>Community Health Worker. Passionate about breaking barriers to healthcare in marginalized
+                    communities.</p>
+            </div>
+            <div class="team-member">
+                <img src="jjijue health pictures/DSC_0391.JPG"  alt="Caroline Teresa Otieno">
+                <div class="member-name">Caroline Teresa Otieno</div>
+                <p>Community Health Worker. Believes in the power of education to transform lives.</p>
+            </div>
+            <div class="team-member">
+                <img src="jijue health pictures/DSC_O393.JPG" alt="Vivian Achieng">
+                <div class="member-name">Vivian Achieng</div>
+                <p>Community Health Worker. Empowers young people with SRHR education in urban areas.</p>
+            </div>
         </div>
 
-        <!-- Contact and Social Media Slide -->
-        <div id="contact Us" class="slide">
-            <h2>Contact Us</h2>
-            <p><strong>Email:</strong> tracyatieno570@gmail.com, vivianabung1980@gmail.com</p>
-            <p><strong>Phone:</strong> +254 700 000 000</p>
-            <p><strong>Social Media:</strong></p>
-            <p>
-                <a href="https://facebook.com/jijuehealth" target="_blank">Facebook</a> |
-                <a href="https://instagram.com/jijuehealth" target="_blank">Instagram</a> |
-                <a href="https://x.com/jijuehealth" target="_blank">X</a> |
-                <a href="https://wa.me/254700000000" target="_blank">WhatsApp</a>
-            </p>
+        <h3 class="section-title" style="margin-top: 80px;">Our Milestones</h3>
+        <div style="max-width: 800px; margin: 0 auto; text-align: left;">
+            <p>Since its founding in June 2024, JijueHealth has made significant strides in bridging the gap in Sexual
+                and Reproductive Health and Rights (SRHR) education and services for adolescents and young adults in
+                urban slums. Through our community-centered approach and digital platform, we have successfully:</p>
+            <ul style="margin-bottom: 50px;">
+                <li>Reached over 500 youth in Kibera through direct engagement, workshops, and online consultations.
+                </li>
+                <li>Conducted 10+ SRHR workshops in collaboration with local community centers, schools, and health
+                    organizations.</li>
+                <li>Partnered with 3 local pharmacies, enabling discreet and youth-friendly access to contraceptives and
+                    menstrual hygiene products.</li>
+                <li>Distributed over 1,000 SRHR-related products, including condoms, sanitary pads, and emergency
+                    contraceptives.</li>
+                <li>Facilitated 100+ one-on-one consultations via our online platform and community health volunteers.
+                </li>
+            </ul>
         </div>
-    </div>
+    </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Get in Touch</h2>
+        <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">We're here for you—let's connect.</p>
+
+        <div class="contact-options">
+            <div class="contact-option">
+                <h3>Chat</h3>
+                <p>Message us on WhatsApp.</p>
+                <a href="https://wa.me/233206431143"
+                    class="card-button"><i class="fab fa-whatsapp" style="margin-right: 8px;"></i> WhatsApp Us</a>
+            </div>
+            <div class="contact-option">
+                <h3>Email</h3>
+                <p>Send us a note.</p>
+                <a href="mailto:jijuehealth@gmail.com"
+                    class="card-button"><i class="fas fa-envelope" style="margin-right: 8px;"></i> Email Us</a>
+            </div>
+            <div class="contact-option">
+                <h3>Join Us</h3>
+                <p>Volunteer or partner.</p>
+                <a href="#contact" class="card-button"><i class="fas fa-hands-helping" style="margin-right: 8px;"></i>
+                    Sign Up</a>
+            </div>
+            <div class="contact-option">
+                <h3>Support Us</h3>
+                <p>Offer your support.</p>
+                <a href="#contact" class="card-button"><i class="fas fa-donate" style="margin-right: 8px;"></i>
+                    Donate</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <div class="footer-logo">JijueHealth</div>
+                <p style="max-width: 300px; margin: 0 auto;">Empowering youth with SRHR education and services.</p>
+            </div>
+            <div class="footer-column">
+                <div class="footer-links">
+                    <a href="#about">About Us</a>
+                    <a href="#services">Services</a>
+                    <a href="#essentials">Products</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <div class="footer-social">
+                    <p>Follow Us</p>
+                    <div class="social-icons">
+                        <a href="https://www.tiktok.com/@jijuehealth.africa?_t=ZM-8vJig4IaTlm&_r=1"
+                            target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://instagram.com/jijuehealth" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/jijuehealth" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.2);">
+            <p>&copy; 2024 JijueHealth. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
+
 </html>
