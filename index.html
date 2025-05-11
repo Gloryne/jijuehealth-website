@@ -163,6 +163,91 @@
             background-color: var(--maroon);
         }
 
+        .srhr-content {
+            display: none;
+            padding: 1rem;
+            background-color:black;
+            border-radius: 4px;
+            margin-top: 1rem;
+            border-left: 4px solid var(--text-on-maroon);
+        }
+        
+        .srhr-topic {
+            margin-bottom: 2rem;
+        }
+        
+        .srhr-topic h3 {
+            color: var(--text-on-maroon);
+            border-bottom: 2px solid var(--maroon);
+            padding-bottom: 0.5rem;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: var(--text-on-maroon)E8F5E9;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .underline {
+            text-decoration: underline;
+        }
+        
+        .highlight {
+            background-color:var(--text-on-maroon);
+            padding: 0.2rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .section {
+            background-color:var(--maroon-light);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        h1, h2, h3 {
+            color : var(--text-on-maroon);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--maroon-dark);
+            color: var(--text-on-maroon);
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: white;
+        }
+       
+
         /* Service Cards */
         .services {
             padding: 100px 5%;
@@ -439,7 +524,7 @@
             font-weight: bold;
             margin-bottom: 10px;
         }
-
+ 
         .select-product-btn {
             display: block;
             background-color: var(--maroon);
@@ -487,6 +572,7 @@
         #imageUpload {
             display: none;
         }
+        
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -556,10 +642,12 @@
         <a href="#home" class="logo">JijueHealth</a>
         <div class="nav-links">
             <a href="#home">Home</a>
+            <a href="#SRHR">SRHR</a>
             <a href="#education">Education</a>
             <a href="#support">Support</a>
             <a href="#essentials">Essentials</a>
             <a href="#about">About Us</a>
+           
         </div>
     </nav>
 
@@ -588,6 +676,898 @@
                 More</a>
         </div>
     </section>
+
+    <section id="SRHR" class="hero">
+        <div class="hero-content">
+        <h2>Sexual and Reproductive Health and Rights (SRHR)</h2>
+        <p>Comprehensive information about sexual and reproductive health, rights, and services available to young people in Kenya.</p>
+        </div>
+        <button class="btn" onclick="toggleSRHRContent()">Show SRHR Information</button>
+        
+        <div id="srhrContent" class="srhr-content">
+            
+            <div class="srhr-topic">
+                <h3>1. Menstrual Health and Hygiene</h3>
+                <p><strong>🔄 How the Menstrual Cycle Works</strong></p>
+                <p>The menstrual cycle is a <strong>natural, healthy process</strong> that prepares the female body for pregnancy each month. It involves <strong>hormonal changes</strong>, ovulation (release of an egg), and menstruation (bleeding).</p>
+                
+                <ul>
+                    <li>✅ A typical cycle lasts <strong>28 days</strong>, but anything between <strong>21-35 days</strong> is normal for most girls and women.</li>
+                    <li>✅ It begins at <strong>menarche</strong> (the first period), usually between ages <strong>9-16</strong>, and continues until <strong>menopause</strong> (around age 45-55).</li>
+                </ul>
+                
+                <p><strong>🩸 Phases of the Cycle:</strong></p>
+                <ol>
+                    <li><strong>Menstrual Phase (Day 1-5)</strong>
+                        <ul>
+                            <li>The <strong>uterus sheds its lining</strong>, resulting in bleeding. This is the period.</li>
+                            <li>Hormone levels (estrogen and progesterone) are low.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Follicular Phase (Day 1-13)</strong>
+                        <ul>
+                            <li>Starts with menstruation and continues until ovulation.</li>
+                            <li>The <strong>pituitary gland</strong> stimulates the ovaries to mature eggs.</li>
+                            <li>Estrogen levels rise, rebuilding the uterine lining.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Ovulation (Around Day 14)</strong>
+                        <ul>
+                            <li>A <strong>mature egg is released</strong> from the ovary into the fallopian tube.</li>
+                            <li>This is the <strong>fertile window</strong> - the best chance to get pregnant.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Luteal Phase (Day 15-28)</strong>
+                        <ul>
+                            <li>The body prepares for possible pregnancy.</li>
+                            <li>If no sperm fertilizes the egg, hormone levels drop, the uterine lining breaks down, and a new cycle begins.</li>
+                        </ul>
+                    </li>
+                </ol>
+                
+                <p>✅ <strong>Important Note</strong>: Sperm can survive in the uterus for up to <strong>5 days</strong>, so it's possible (though rare) to get pregnant even if sex happens <strong>before ovulation or during a period</strong>.</p>
+                
+                <p><strong>🩹 Managing Periods: Products and Options</strong></p>
+                <p>In Kenya, access to period products varies greatly by region, income level, and education. Everyone deserves safe, affordable, and dignified menstrual care.</p>
+                
+                <p><strong>🔘 1. Disposable Sanitary Pads</strong></p>
+                <ul>
+                    <li>Most commonly used.</li>
+                    <li>Easy to apply, discreet.</li>
+                    <li>Widely available in supermarkets and kiosks.</li>
+                    <li><strong>Downside</strong>: Expensive over time; generates plastic waste.</li>
+                </ul>
+                
+                <p><strong>🔘 2. Tampons</strong></p>
+                <ul>
+                    <li>Inserted inside the vagina to absorb blood.</li>
+                    <li>Less common due to myths (e.g., they "take away virginity").</li>
+                    <li>Require hygiene awareness and comfort with one's body.</li>
+                </ul>
+                
+                <p><strong>🔘 3. Menstrual Cups</strong></p>
+                <ul>
+                    <li>Flexible silicone cups inserted to <strong>collect</strong> blood, not absorb it.</li>
+                    <li>Reusable for up to <strong>10 years</strong> if cleaned well.</li>
+                    <li>Eco-friendly and cost-effective over time.</li>
+                    <li>Need proper <strong>education on insertion, removal, and sterilization.</strong></li>
+                </ul>
+                
+                <p><strong>🔘 4. Reusable Cloth Pads</strong></p>
+                <ul>
+                    <li>Washable, affordable alternative to disposable pads.</li>
+                    <li>Good for rural areas with water access and privacy.</li>
+                    <li>Must be dried in the <strong>sun</strong> to kill bacteria.</li>
+                </ul>
+                
+                <p><strong>🔘 5. Period Underwear</strong></p>
+                <ul>
+                    <li>Absorbs blood like a pad.</li>
+                    <li>Can be worn alone or as backup with other products.</li>
+                    <li>Comfortable but can be pricey.</li>
+                </ul>
+                
+                <p><strong>🧠 Myths and Misconceptions</strong></p>
+                <p>Many young girls grow up with <strong>shame, fear, or confusion</strong> about their periods due to harmful myths like:</p>
+                
+                <table>
+                    <tr>
+                        <th><strong>Myth</strong></th>
+                        <th><strong>Reality</strong></th>
+                    </tr>
+                    <tr>
+                        <td>"Periods are dirty/impure."</td>
+                        <td>Periods are <strong>natural</strong> and part of reproductive health.</td>
+                    </tr>
+                    <tr>
+                        <td>"Girls should not cook or touch others during periods."</td>
+                        <td>These are <strong>cultural beliefs</strong>, not health facts.</td>
+                    </tr>
+                    <tr>
+                        <td>"You can't get pregnant during your period."</td>
+                        <td>False. <strong>Pregnancy is possible</strong> due to sperm survival and cycle variation.</td>
+                    </tr>
+                    <tr>
+                        <td>"Tampons or cups break your virginity."</td>
+                        <td>Virginity is <strong>a social idea</strong>, not a physical state. Tampons/cups do not affect it.</td>
+                    </tr>
+                </table>
+                
+                <p>These myths often lead to <strong>period shame, social exclusion, and poor menstrual health practices</strong>.</p>
+                
+                <p><strong>💰 Period Poverty and Cultural Taboos</strong></p>
+                <p><strong>🚫 What Is Period Poverty?</strong></p>
+                <ul>
+                    <li>Inability to afford <strong>pads, soap, pain medication</strong>, or even clean underwear.</li>
+                    <li>Common in <strong>low-income families</strong>, rural areas, and refugee settings.</li>
+                    <li>Linked to <strong>school absenteeism, poor performance, and even transactional sex</strong> for pads.</li>
+                </ul>
+                
+                <p><strong>🤐 Cultural Silence and Taboos</strong></p>
+                <ul>
+                    <li>Many parents and teachers <strong>don't talk openly</strong> about menstruation.</li>
+                    <li>Some communities still <strong>ban girls from kitchens, churches, or community events</strong> during periods.</li>
+                    <li>This silence leads to <strong>embarrassment, bullying, and low self-esteem</strong> in girls.</li>
+                </ul>
+                
+                <p><strong>✅ What We Must Do: Towards Dignity and Inclusion</strong></p>
+                <ol>
+                    <li><strong>Normalize the Conversation</strong>
+                        <ul>
+                            <li>Talk about periods openly in homes, schools, churches, and media.</li>
+                            <li>Use <strong>friendly language</strong> - e.g., "maisha ya kila mwezi" (monthly life), not "hiyo kitu."</li>
+                            <li>Include boys and men to reduce stigma.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Provide Free or Subsidized Products</strong>
+                        <ul>
+                            <li>Schools and youth centers should <strong>distribute reusable or disposable pads</strong>.</li>
+                            <li>Train youth on <strong>product use, hygiene, and disposal.</strong></li>
+                        </ul>
+                    </li>
+                    <li><strong>Menstrual Education for All</strong>
+                        <ul>
+                            <li>Teach not just biology, but also emotional and social aspects.</li>
+                            <li>Include information about <strong>irregular periods, PMS, endometriosis</strong>, and when to seek medical help.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Advocate for Policy Change</strong>
+                        <ul>
+                            <li>Support national programs that fund menstrual product distribution and education.</li>
+                            <li>Push for better <strong>WASH (Water, Sanitation, Hygiene)</strong> facilities in schools and clinics.</li>
+                        </ul>
+                    </li>
+                </ol>
+                
+                <p><strong>💬 Empowering Message for Youth:</strong></p>
+                <p><strong>Your period is not a weakness. It's your power.</strong></p>
+                <p>You deserve to bleed with <strong>dignity, comfort, and pride.</strong></p>
+                <p>Never let shame or silence steal your voice or your education.</p>
+                
+                <p><strong>References</strong></p>
+                <ol>
+                    <li><strong>UNICEF (2021).</strong> <em>Menstrual Health and Hygiene.</em><br>
+                    👉 <a href="https://www.unicef.org/wash/menstrual-hygiene">https://www.unicef.org/wash/menstrual-hygiene</a></li>
+                    <li><strong>WaterAid & Ministry of Health Kenya (2022).</strong> <em>Menstrual Health Guidelines.</em><br>
+                    👉 <a href="https://www.wateraid.org/ke">https://www.wateraid.org/ke</a></li>
+                </ol>
+            </div>
+            
+            <div class="srhr-topic">
+                <h3>2. Contraception and Family Planning</h3>
+                <p><strong>❓ What is Contraception?</strong></p>
+                <p>Contraception - also called <strong>birth control</strong> - includes all the methods used to <strong>prevent unintended pregnancies</strong>. It allows individuals and couples to decide <strong>if, when, and how many children</strong> they want to have. Beyond pregnancy prevention, contraception is also essential for:</p>
+                
+                <ul>
+                    <li><strong>Reducing maternal deaths</strong> by preventing unsafe abortions,</li>
+                    <li><strong>Empowering women and girls</strong> to pursue education and careers,</li>
+                    <li><strong>Supporting gender equality</strong>, and</li>
+                    <li><strong>Protecting sexual and reproductive health rights (SRHR).</strong></li>
+                </ul>
+                
+                <p><strong>Common Contraceptive Methods:</strong></p>
+                
+                <p><strong>Male condoms</strong>: A barrier worn on the penis that blocks sperm. They protect against both pregnancy and STIs. Easy to access, but must be used correctly every time.</p>
+                
+                <p><strong>Female condoms</strong>: Worn inside the vagina. They offer the same protection as male condoms but are less known and can be more expensive or harder to find.</p>
+                
+                <p><strong>Birth control pills</strong>: Taken daily, they contain hormones that stop ovulation. They regulate periods and reduce cramps, but must be used consistently and do not protect against STIs.</p>
+                
+                <p><strong>Injectables (e.g., Depo-Provera)</strong>: A hormone shot given every 3 months. It is private and long-lasting, but some users experience weight gain or delayed fertility return.</p>
+                
+                <p><strong>Implants</strong>: Small rods placed under the skin of the upper arm that release hormones over 3-5 years. Highly effective and low maintenance, though insertion and removal require a trained provider.</p>
+                
+                <p><strong>Intrauterine Devices (IUDs)</strong>: A small device placed in the uterus. There are hormonal and copper types, effective for 5-10 years. They don't protect against STIs and can cause cramps or heavier periods initially.</p>
+                
+                <p><strong>Emergency contraception (e.g., P2)</strong>: Pills taken within 72 hours after unprotected sex. Useful in emergencies but should not be used as regular contraception. May cause nausea or delayed periods.</p>
+                
+                <p><strong>Withdrawal method</strong>: Pulling out before ejaculation. This is not reliable and has a high risk of failure.</p>
+                
+                <p><strong>Fertility awareness</strong>: Tracking the menstrual cycle and avoiding sex during fertile days. Requires training, discipline, and regular cycles.</p>
+                
+                <p><strong>Sterilization</strong>: Permanent contraception through surgery. It is usually for adults who are sure they don't want more children. Not reversible.</p>
+                
+                <p><strong>Access in Kenya:</strong><br>
+                Youth in Kenya can legally access contraception at age 18 without parental consent. However, stigma, provider judgment, and lack of youth-friendly clinics prevent many from accessing what they need. Some services like Marie Stopes Kenya and public health centers offer confidential SRHR services.</p>
+                
+                <p><strong>✅ Where to Get Help</strong></p>
+                <ul>
+                    <li><strong>Public health facilities</strong>: Offer a range of free or low-cost options.</li>
+                    <li><strong>Youth-friendly centers</strong>: Some are part of public hospitals or NGOs.</li>
+                    <li><strong>Marie Stopes Kenya</strong>, <strong>LVCT Health</strong>, <strong>Family Health Options Kenya (FHOK)</strong> - known for confidential and non-judgmental SRHR services.</li>
+                    <li><strong>Pharmacies and chemists</strong>: Easily accessible for condoms, emergency contraception, and sometimes pills or injectables (depending on the area).</li>
+                </ul>
+                
+                <p><strong>References</strong></p>
+                <ol>
+                    <li><strong>UNFPA (2023).</strong> <em>Contraceptives and Family Planning FAQs.</em><br>
+                    👉 <a href="https://www.unfpa.org/family-planning">https://www.unfpa.org/family-planning</a></li>
+                    <li><strong>WHO (2021).</strong> <em>Family Planning and Contraceptive Methods.</em><br>
+                    👉 <a href="https://www.who.int/news-room/fact-sheets/detail/family-planning-contraception">https://www.who.int/news-room/fact-sheets/detail/family-planning-contraception</a></li>
+                    <li><strong>Marie Stopes Kenya.</strong> <em>Youth-Friendly Services and Contraceptive Options.</em><br>
+                    👉 <a href="https://www.mariestopes.or.ke">https://www.mariestopes.or.ke</a></li>
+                </ol>
+            </div>
+            
+            <div class="srhr-topic">
+                <h3>3. STIs and HIV/AIDS Awareness</h3>
+                <p><strong>What are STIs?</strong><br>
+                Sexually transmitted infections (STIs) are passed from one person to another through sexual contact. They can affect anyone who is sexually active, regardless of age or gender.</p>
+                
+                <p><strong>Common STIs and Their Symptoms:</strong></p>
+                
+                <p><strong>HIV/AIDS (Human Immunodeficiency Virus)</strong></p>
+                <ul>
+                    <li><strong>How it works</strong>: HIV attacks the immune system, weakening the body's ability to fight infections.</li>
+                    <li><strong>Transmission</strong>: Through unprotected sex, sharing needles, blood transfusion, or from mother to child during childbirth or breastfeeding.</li>
+                    <li><strong>Symptoms</strong>: Fatigue, rapid weight loss, fever, night sweats, swollen lymph nodes, frequent infections. Many people don't show symptoms for years.</li>
+                    <li><strong>Treatment</strong>: No cure yet, but <strong>Antiretroviral Therapy (ARVs)</strong> can control the virus and help people live long, healthy lives.</li>
+                    <li><strong>Prevention</strong>: Condoms, PrEP (pre-exposure prophylaxis), avoiding needle sharing, getting tested regularly.</li>
+                </ul>
+                
+                <p><strong>• Chlamydia</strong></p>
+                <ul>
+                    <li>Often <strong>asymptomatic</strong>, especially in females - meaning people may not know they have it.</li>
+                    <li>When symptoms appear: Pain during urination, unusual discharge, pelvic pain.</li>
+                    <li><strong>Complication</strong>: Can cause infertility if untreated.</li>
+                    <li><strong>Treatment</strong>: Curable with antibiotics.</li>
+                </ul>
+                
+                <p><strong>• Gonorrhea</strong></p>
+                <ul>
+                    <li>Symptoms: Yellow/green discharge, burning sensation when urinating, pelvic pain.</li>
+                    <li>Can infect genitals, rectum, and throat.</li>
+                    <li><strong>Complication</strong>: Pelvic Inflammatory Disease (PID) or infertility.</li>
+                    <li><strong>Treatment</strong>: Curable with a combination of antibiotics.</li>
+                </ul>
+                
+                <p><strong>• Syphilis</strong></p>
+                <ul>
+                    <li>Stage 1: Painless sores on genitals, anus, or mouth.</li>
+                    <li>Stage 2: Skin rashes, fever, fatigue.</li>
+                    <li>If untreated, it can cause <strong>severe organ damage</strong>, paralysis, or even death.</li>
+                    <li><strong>Treatment</strong>: Easily treated with penicillin in early stages.</li>
+                </ul>
+                
+                <p><strong>• HPV (Human Papillomavirus)</strong></p>
+                <ul>
+                    <li>Very common. Some types cause <strong>genital warts</strong>, others cause <strong>cervical cancer</strong>.</li>
+                    <li>Often no symptoms.</li>
+                    <li><strong>Prevention</strong>: HPV vaccine (given to both girls and boys around age 9-14), regular Pap smears for women.</li>
+                    <li><strong>Treatment</strong>: No cure for the virus, but symptoms can be managed.</li>
+                </ul>
+                
+                <p><strong>• Herpes Simplex Virus (HSV)</strong></p>
+                <ul>
+                    <li>Symptoms: Painful blisters or sores around the genitals, anus, or mouth.</li>
+                    <li>Can be passed even when no visible sores are present.</li>
+                    <li><strong>Treatment</strong>: No cure, but antiviral medicine can reduce outbreaks and transmission.</li>
+                </ul>
+                
+                <p><strong>• Hepatitis B</strong></p>
+                <ul>
+                    <li>Affects the liver.</li>
+                    <li>Spread through sex, sharing razors/needles, or from mother to child.</li>
+                    <li>Symptoms: Fatigue, jaundice (yellow skin), dark urine, stomach pain.</li>
+                    <li><strong>Prevention</strong>: Safe sex, avoid sharing personal items, <strong>Hepatitis B vaccine</strong>.</li>
+                    <li><strong>Treatment</strong>: Chronic cases may need long-term antiviral treatment.</li>
+                </ul>
+                
+                <p><strong>🛡️ Prevention Strategies</strong></p>
+                <ol>
+                    <li><strong>Consistent Condom Use</strong>: Use <strong>male or female condoms</strong> every time during vaginal, anal, or oral sex.</li>
+                    <li><strong>Get Tested Regularly</strong>: Know your status - especially when you have new or multiple partners.</li>
+                    <li><strong>Reduce the Number of Sexual Partners</strong>: Fewer partners = lower exposure risk.</li>
+                    <li><strong>Vaccination</strong>:
+                        <ul>
+                            <li><strong>HPV vaccine</strong> protects against cervical cancer and genital warts.</li>
+                            <li><strong>Hepatitis B vaccine</strong> is free in Kenya for infants and recommended for all.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Open Communication</strong>: Talk honestly with partners about STIs, protection, and testing.</li>
+                    <li><strong>Avoid Alcohol/Drugs During Sex</strong>: Being under the influence may lead to risky choices</li>
+                </ol>
+                
+                <p><strong>⚠️ Youth-Specific Challenges in Kenya</strong></p>
+                <ul>
+                    <li><strong>Fear of Judgment</strong>: Many youth avoid clinics for testing or treatment due to shame or fear of being judged by health workers or peers.</li>
+                    <li><strong>Misinformation</strong>: Some still believe myths like "you can tell if someone has an STI by looking at them" - which is false.</li>
+                    <li><strong>Stigma</strong>: HIV-positive individuals and those with visible STI symptoms may face rejection or discrimination.</li>
+                    <li><strong>Lack of Youth-Friendly Services</strong>: Not all clinics offer private, respectful care for adolescents.</li>
+                </ul>
+                
+                <p><strong>✅ What Can Be Done</strong></p>
+                <ul>
+                    <li><strong>Normalize testing</strong>: Encourage youth to get tested just like any health check-up.</li>
+                    <li><strong>Create safe spaces</strong>: Youth-friendly clinics and mobile SRH clinics can help break stigma.</li>
+                    <li><strong>Use peer education</strong>: Young people are more likely to listen and learn from each other.</li>
+                    <li><strong>Digital outreach</strong>: Use TikTok, Instagram, WhatsApp groups, and influencers to spread accurate info in a fun, relatable way.</li>
+                </ul>
+                
+                <p><strong>💬 Youth-Centered Message:</strong></p>
+                <p>"Knowing your status is powerful. Protecting yourself and your partner is smart. STIs are treatable - but silence is dangerous."</p>
+                
+                <p><strong>References</strong></p>
+                <ol>
+                    <li><strong>Centers for Disease Control and Prevention (CDC).</strong> <em>STI Fact Sheets.</em><br>
+                    👉 <a href="https://www.cdc.gov/std/default.htm">https://www.cdc.gov/std/default.htm</a></li>
+                    <li><strong>National AIDS Control Council (Kenya) (2022).</strong> <em>Kenya HIV Estimates Report.</em><br>
+                    👉 <a href="https://nacc.or.ke">https://nacc.or.ke</a></li>
+                    <li><strong>WHO (2023).</strong> <em>HIV/AIDS Key Facts.</em><br>
+                    👉 <a href="https://www.who.int/news-room/fact-sheets/detail/hiv-aids">https://www.who.int/news-room/fact-sheets/detail/hiv-aids</a></li>
+                </ol>
+            </div>
+            
+            <div class="srhr-topic">
+                <h3>4. Consent and Healthy Relationships</h3>
+                <p><strong>Understanding Consent</strong></p>
+                <p><strong>Consent</strong> is a clear, unambiguous, and voluntary agreement between participants to engage in specific sexual or intimate activity. It is a fundamental part of any respectful and healthy relationship, and it must be:</p>
+                
+                <ul>
+                    <li><strong>Freely Given</strong>: Consent must come without force, pressure, manipulation, or influence from drugs or alcohol.</li>
+                    <li><strong>Clear and Enthusiastic</strong>: It should be communicated clearly, either verbally or through mutually understood actions. Silence or lack of resistance is <em>not</em> consent.</li>
+                    <li><strong>Informed</strong>: Both parties must fully understand what they are consenting to.</li>
+                    <li><strong>Reversible</strong>: Anyone can change their mind at any time—even if you've done it before or are in the middle of the activity.</li>
+                    <li><strong>Specific</strong>: Agreeing to one thing (e.g., kissing) doesn't mean agreement to something else (e.g., sex).</li>
+                </ul>
+                
+                <p><strong>Consent is not valid if:</strong></p>
+                <ul>
+                    <li>Someone is <strong>under the legal age of consent</strong> (in Kenya, this is 18 years).</li>
+                    <li>The person is <strong>asleep, unconscious, or intoxicated</strong>.</li>
+                    <li>The agreement is obtained through <strong>threats, manipulation, or fear</strong>.</li>
+                    <li>The person is <strong>in a situation of power imbalance</strong> (e.g., a teacher-student relationship).</li>
+                </ul>
+                
+                <p>Teaching about consent early helps reduce sexual abuse, improves respect in relationships, and promotes personal autonomy.</p>
+                
+                <p><strong>Signs of a Healthy Relationship</strong></p>
+                <p>A healthy relationship is built on mutual growth, safety, and respect. It includes:</p>
+                
+                <ul>
+                    <li>✅ <strong>Mutual Respect</strong>: Both individuals value each other's opinions, boundaries, and identities.</li>
+                    <li>✅ <strong>Open and Honest Communication</strong>: Each partner can express their thoughts and feelings freely without fear of judgment or retaliation.</li>
+                    <li>✅ <strong>Clear Boundaries</strong>: Both people agree on what they're comfortable with—physically, emotionally, and socially.</li>
+                    <li>✅ <strong>Emotional Safety</strong>: Partners feel secure, supported, and understood. There is no fear of ridicule, criticism, or violence.</li>
+                    <li>✅ <strong>Shared Decision-Making</strong>: Choices—about intimacy, finances, time together, or social life—are made together, not imposed by one partner.</li>
+                </ul>
+                
+                <p>Healthy relationships also allow room for <strong>personal growth</strong>, <strong>individual hobbies</strong>, and <strong>connection to others</strong> (family and friends).</p>
+                
+                <p><strong>Signs of an Unhealthy Relationship</strong></p>
+                <p>An unhealthy relationship often involves control, disrespect, and emotional manipulation. Watch out for:</p>
+                
+                <ul>
+                    <li>❌ <strong>Extreme Jealousy or Possessiveness</strong>: One partner tries to control who the other talks to or spends time with.</li>
+                    <li>❌ <strong>Guilt-Tripping or Emotional Blackmail</strong>: Using emotions to manipulate someone's decisions ("If you loved me, you'd...").</li>
+                    <li>❌ <strong>Isolation from Friends or Family</strong>: Preventing someone from spending time with others to increase control.</li>
+                    <li>❌ <strong>Coercion into Sex or Secrecy</strong>: Forcing or pressuring someone into sexual activities or keeping harmful secrets.</li>
+                    <li>❌ <strong>Disrespect or Verbal Abuse</strong>: Constant criticism, insults, or belittling comments.</li>
+                </ul>
+                
+                <p>These behaviors are red flags that should not be ignored. If someone feels unsafe, controlled, or disrespected, it's a sign that the relationship may be emotionally or even physically abusive.</p>
+                
+                <p><strong>Youth Challenges in Kenya</strong></p>
+                <p>Young people in Kenya face a unique set of challenges when it comes to understanding consent and building healthy relationships:</p>
+                
+                <ul>
+                    <li>💔 <strong>Confusing Possessiveness for Love</strong>: Many youth interpret controlling behavior ("I don't want you talking to other boys/girls") as proof of love, when it's actually a sign of insecurity or control.</li>
+                    <li>🧠 <strong>Lack of Relationship Education</strong>: Most schools and homes do not teach young people about emotional health, communication, or sexual rights—leaving them to learn from peers or media.</li>
+                    <li>📺 <strong>Media Influence</strong>: Music videos, movies, and social media often romanticize toxic behaviors like jealousy and obsession, leading to unrealistic and harmful expectations.</li>
+                    <li>👥 <strong>Peer Pressure</strong>: Many youth feel pressured to engage in sex or relationships to fit in, even when they're not emotionally ready or comfortable.</li>
+                </ul>
+                
+                <p><strong>Why Teaching Consent Matters</strong></p>
+                <p>Early and consistent education on consent:</p>
+                
+                <ul>
+                    <li>Builds self-respect and assertiveness.</li>
+                    <li>Empowers youth to set and maintain healthy boundaries.</li>
+                    <li>Reduces cases of sexual violence, STIs, and unintended pregnancies.</li>
+                    <li>Creates a culture of <strong>respect</strong>, <strong>safety</strong>, and <strong>accountability</strong>.</li>
+                </ul>
+                
+                <p><strong>Consent is not just about sex—it's about respect in every interaction.</strong> Promoting conversations around healthy relationships helps create a generation that knows their worth and respects others.</p>
+                
+                <p><strong>References</strong></p>
+                <ol>
+                    <li><strong>UNESCO (2018).</strong> <em>International Technical Guidance on Sexuality Education.</em><br>
+                    👉 <a href="https://unesdoc.unesco.org/ark:/48223/pf0000260770">https://unesdoc.unesco.org/ark:/48223/pf0000260770</a></li>
+                    <li><strong>Raising Voices (Uganda).</strong> <em>SASA! Toolkit on Consent and Power in Relationships.</em><br>
+                    👉 <a href="https://raisingvoices.org">https://raisingvoices.org</a></li>
+                </ol>
+            </div>
+            
+            <div class="srhr-topic">
+                <h3>5. Gender-Based Violence (GBV)</h3>
+                <p><strong>What is GBV?</strong></p>
+                <p><strong>Gender-Based Violence (GBV)</strong> refers to harmful acts directed at a person based on their gender or perceived gender roles. GBV is rooted in inequality, power imbalances, and cultural norms that favor one gender over another—most often men over women. While anyone can be affected, <strong>girls and women are disproportionately the victims</strong>, especially in patriarchal societies like many parts of Kenya.</p>
+                
+                <p>GBV occurs in many settings—at home, in schools, at the workplace, in public, and even online. It can be one-time or ongoing, visible or hidden, and it causes <strong>long-lasting physical, emotional, and psychological harm</strong>.</p>
+                
+                <p><strong>Forms of Gender-Based Violence</strong></p>
+                <p>GBV is not just physical abuse. It includes multiple forms of violence, many of which are overlooked or normalized in society:</p>
+                
+                <p><strong>🔴 1. Physical Violence</strong></p>
+                <ul>
+                    <li>Includes hitting, beating, slapping, choking, kicking, or burning.</li>
+                    <li>Often takes place in domestic settings—by partners or family members.</li>
+                    <li>Victims may hide injuries due to <strong>fear, shame, or economic dependence</strong>.</li>
+                </ul>
+                
+                <p><strong>🔴 2. Sexual Violence</strong></p>
+                <ul>
+                    <li>Any sexual act forced on someone without their consent.</li>
+                    <li>Includes <strong>rape</strong>, <strong>attempted rape</strong>, <strong>sexual assault</strong>, <strong>defilement</strong>, and <strong>sexual harassment</strong>.</li>
+                    <li><strong>Marital rape</strong>—forcing a spouse to have sex—is a form of GBV that's often ignored or misunderstood due to cultural beliefs that sex is a "duty" in marriage.</li>
+                    <li>Many survivors are blamed or shamed, which discourages them from seeking help.</li>
+                </ul>
+                
+                <p><strong>🔴 3. Emotional and Psychological Abuse</strong></p>
+                <ul>
+                    <li>Includes threats, insults, intimidation, humiliation, constant criticism, and <strong>gaslighting</strong> (making someone doubt their reality).</li>
+                    <li>Though invisible, it severely damages mental health and self-esteem.</li>
+                    <li>Victims often feel <strong>trapped</strong> and begin to question their worth or sanity.</li>
+                </ul>
+                
+                <p><strong>🔴 4. Economic Violence</strong></p>
+                <ul>
+                    <li>Controlling someone's access to money, property, education, or job opportunities.</li>
+                    <li>Affects many girls and women when:
+                        <ul>
+                            <li>They are <strong>denied schooling</strong>.</li>
+                            <li>Forced into <strong>child marriage</strong> for dowry or economic relief.</li>
+                            <li>Prevented from working or owning assets.</li>
+                            <li>Their salary or resources are taken from them without consent.</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <p><strong>🔴 5. Harmful Traditional Practices</strong></p>
+                <ul>
+                    <li>Rooted in culture but violate human rights and dignity.</li>
+                    <li>Include:
+                        <ul>
+                            <li><strong>Female Genital Mutilation (FGM)</strong> -- causes lifelong health complications and trauma.</li>
+                            <li><strong>Child and Early Marriage</strong> -- girls are married off before 18, affecting education, autonomy, and health.</li>
+                            <li><strong>Wife Inheritance</strong> -- where a widow is 'inherited' by a male relative of her late husband, often without consent. This violates women's freedom and increases vulnerability to HIV and abuse.</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <p>⛔ While these practices are outlawed in Kenya, they continue in some communities due to <strong>ignorance, poverty, and resistance to change</strong>.</p>
+                
+                <p><strong>Support and Reporting Mechanisms</strong></p>
+                <p>Despite the danger and trauma caused by GBV, <strong>many survivors suffer in silence</strong> due to:</p>
+                
+                <ul>
+                    <li>Stigma and victim-blaming.</li>
+                    <li>Fear of retaliation or rejection by family and community.</li>
+                    <li>Lack of trust in the police, health system, or justice process.</li>
+                    <li>Unawareness of available services and legal rights.</li>
+                </ul>
+                
+                <p><strong>✅ Legal Protections in Kenya:</strong></p>
+                <ul>
+                    <li><strong>Sexual Offences Act (2006):</strong> Defines sexual crimes and prescribes penalties.</li>
+                    <li><strong>Prohibition of FGM Act (2011):</strong> Criminalizes all forms of FGM.</li>
+                    <li><strong>Protection Against Domestic Violence Act (2015):</strong> Recognizes emotional, physical, and economic abuse within families or intimate relationships.</li>
+                </ul>
+                
+                <p><strong>✅ Support Services for Survivors:</strong></p>
+                <ul>
+                    <li><strong>GBV Helpline (1195)</strong> -- Toll-free, confidential, available 24/7.</li>
+                    <li><strong>Hospitals & Clinics:</strong>
+                        <ul>
+                            <li>Provide <strong>post-rape care</strong>, including emergency contraception and treatment of injuries.</li>
+                            <li><strong>PEP (Post-Exposure Prophylaxis)</strong> to prevent HIV (must be taken within 72 hours).</li>
+                            <li><strong>Counseling services</strong> for trauma recovery.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Organizations offering support:</strong>
+                        <ul>
+                            <li><strong>LVCT Health</strong> -- Medical care, psychosocial support, and referrals.</li>
+                            <li><strong>FIDA Kenya</strong> -- Legal aid for women survivors.</li>
+                            <li><strong>Wangu Kanja Foundation</strong> -- Survivor-led advocacy and support for GBV victims.</li>
+                            <li><strong>CREAW, Ujamaa Africa, and Refugee Consortium of Kenya (RCK)</strong> -- Provide shelter, legal help, therapy, and community outreach.</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <p><strong>Empowering Youth to Act</strong></p>
+                <p>Young people have a powerful role to play in <strong>preventing and speaking out against GBV</strong>:</p>
+                
+                <p>✅ Learn your rights and know what GBV looks like.<br>
+                ✅ Challenge harmful beliefs like "men are entitled to women's bodies."<br>
+                ✅ Respect boundaries—yours and others'.<br>
+                ✅ Speak up when you see or hear abuse.<br>
+                ✅ Support survivors without blaming or judging them.<br>
+                ✅ Use your voice online and offline to advocate for safe, equal, and respectful communities.</p>
+                
+                <p><strong>Key Message:</strong></p>
+                <p><strong>GBV is never the survivor's fault.</strong> It's a violation of human rights and a public health issue. Ending GBV starts with education, empathy, and action—from individuals, families, schools, and society.</p>
+                
+                <p><strong>Reference</strong></p>
+                <ol>
+                    <li><strong>UN Women (2022).</strong> <em>Facts and Figures on Gender-Based Violence.</em><br>
+                    👉 <a href="https://www.unwomen.org/en/what-we-do/ending-violence-against-women/facts-and-figures">https://www.unwomen.org/en/what-we-do/ending-violence-against-women/facts-and-figures</a></li>
+                    <li><strong>LVCT Health Kenya.</strong> <em>GBV Support Services and Reporting in Kenya.</em><br>
+                    👉 <a href="https://lvcthealth.org">https://lvcthealth.org</a></li>
+                    <li><strong>National Gender and Equality Commission (Kenya).</strong> <em>GBV Framework and Resources.</em><br>
+                    👉 <a href="https://www.ngeckenya.org">https://www.ngeckenya.org</a></li>
+                </ol>
+            </div>
+            
+            <div class="srhr-topic">
+                <h3>6. Body Autonomy and Self-Awareness</h3>
+                <p><strong>What is Body Autonomy?</strong></p>
+                <p><strong>Body autonomy</strong> is the fundamental human right to have control over your own body and to make decisions about it without pressure, manipulation, or force from others. It means:</p>
+                
+                <ul>
+                    <li>You have the <strong>final say</strong> about what happens to your body.</li>
+                    <li>You can decide if, when, and with whom to engage in <strong>sexual activity</strong>.</li>
+                    <li>You can choose to <strong>use contraception</strong>, seek healthcare, or refuse treatment.</li>
+                    <li>You can dress in a way that feels right for you—free from judgment or coercion.</li>
+                    <li>You can say <strong>"NO" at any time</strong>, even if you previously said "yes."</li>
+                </ul>
+                
+                <p>This right applies to <strong>everyone</strong>—regardless of age, gender, or background. When youth understand body autonomy, they become more confident in setting boundaries, resisting peer pressure, and protecting themselves from abuse.</p>
+                
+                <p><strong>Puberty and Physical Changes</strong></p>
+                <p>Puberty is a natural biological process when the body develops into its adult form, including sexual maturity. It can feel awkward, exciting, or overwhelming—especially without proper guidance.</p>
+                
+                <p><strong>💗 For Girls:</strong></p>
+                <ul>
+                    <li><strong>Menstruation begins</strong> (first period). This is a sign that the body is capable of pregnancy.</li>
+                    <li><strong>Breasts develop</strong> and <strong>hips may widen</strong>.</li>
+                    <li><strong>Body hair</strong> grows in new areas (underarms, pubic region).</li>
+                    <li>May experience <strong>acne</strong>, mood swings, or changes in weight.</li>
+                    <li>Often face <strong>social stigma</strong> or shaming around periods and body development.</li>
+                </ul>
+                
+                <p><strong>💙 For Boys:</strong></p>
+                <ul>
+                    <li><strong>Voice deepens</strong> and becomes more masculine.</li>
+                    <li><strong>Growth spurts</strong>—they get taller and gain muscle mass.</li>
+                    <li><strong>Wet dreams</strong> (nocturnal emissions) may occur—this is completely normal.</li>
+                    <li><strong>Facial and body hair</strong> appears.</li>
+                    <li>May feel pressure to act "manly" or suppress emotion.</li>
+                </ul>
+                
+                <p><strong>💭 Emotionally:</strong></p>
+                <ul>
+                    <li>Youth often feel <strong>confused</strong>, <strong>curious</strong>, <strong>self-conscious</strong>, or even <strong>ashamed</strong>.</li>
+                    <li>Developing attraction or desire is <strong>natural</strong>, but without open conversations, young people may turn to <strong>unsafe sources</strong> for answers (e.g., pornography, peers, or misleading media).</li>
+                </ul>
+                
+                <p><strong>Self-Awareness and Emotional Growth</strong></p>
+                <p><strong>Self-awareness</strong> means being in tune with your <strong>body, emotions, thoughts, and boundaries</strong>. It's the foundation of making safe, empowered decisions in life and relationships.</p>
+                
+                <p>Key areas of self-awareness include:</p>
+                
+                <p><strong>🔹 Understanding Your Body:</strong></p>
+                <ul>
+                    <li>Knowing what's normal and what's not (e.g., for periods, erections, discharge).</li>
+                    <li>Becoming comfortable with your appearance and bodily functions.</li>
+                    <li>Recognizing when something is wrong and when to seek help.</li>
+                </ul>
+                
+                <p><strong>🔹 Knowing Your Boundaries:</strong></p>
+                <ul>
+                    <li>Knowing what you're okay with and what makes you uncomfortable.</li>
+                    <li>Being able to communicate those boundaries without fear or guilt.</li>
+                    <li>Learning to <strong>respect others' boundaries</strong> too.</li>
+                </ul>
+                
+                <p><strong>🔹 Emotional and Mental Health:</strong></p>
+                <ul>
+                    <li>Identifying feelings like anxiety, sadness, or pressure.</li>
+                    <li>Understanding that it's okay to <strong>feel emotions</strong>, cry, or ask for help.</li>
+                    <li>Building resilience through self-expression, journaling, or talking to trusted adults.</li>
+                </ul>
+                
+                <p><strong>🔹 Body Positivity:</strong></p>
+                <ul>
+                    <li>Accepting your body as it is—regardless of skin color, size, shape, or ability.</li>
+                    <li>Rejecting unrealistic beauty standards often pushed by media.</li>
+                    <li>Embracing differences and supporting others in doing the same.</li>
+                </ul>
+                
+                <p><strong>Challenges Youth Face:</strong></p>
+                <p>Despite these being normal parts of growing up, many young people in Kenya (and globally) struggle with:</p>
+                
+                <ul>
+                    <li><strong>Shame or guilt</strong> rooted in religion or cultural taboos.</li>
+                    <li><strong>Lack of reliable information</strong>—leading to myths, fear, or risky behavior.</li>
+                    <li><strong>Pressure to conform</strong> to certain gender roles or stereotypes.</li>
+                    <li><strong>Fear of judgment</strong> when asking questions or being open.</li>
+                </ul>
+                
+                <p><strong>Breaking the Silence with Open Conversations</strong></p>
+                <p>To foster self-awareness and body autonomy, we need to create <strong>safe, relatable, and judgment-free spaces</strong> where young people can talk, ask, and learn.</p>
+                
+                <p>✅ Use <strong>humor</strong>, <strong>real stories</strong>, and <strong>youth-friendly language</strong> to make the conversation less awkward.<br>
+                ✅ Encourage peer-led discussions and Q&A forums (like JijueHealth).<br>
+                ✅ Challenge shame by sharing accurate information and positive messages.<br>
+                ✅ Celebrate personal growth and self-love as a <strong>journey—not a destination</strong>.</p>
+                
+                <p><strong>References</strong></p>
+                <ol>
+                    <li><strong>UNFPA (2021).</strong> <em>My Body Is My Own -- State of World Population Report.</em><br>
+                    👉 <a href="https://www.unfpa.org/publications/state-world-population-2021">https://www.unfpa.org/publications/state-world-population-2021</a></li>
+                    <li><strong>WHO (2022).</strong> <em>Puberty Education and Body Autonomy.</em><br>
+                    👉 <a href="https://www.who.int/health-topics/adolescent-health">https://www.who.int/health-topics/adolescent-health</a></li>
+                </ol>
+            </div>
+            
+            <div class="srhr-topic">
+                <h3>7. Youth Rights and Access to Services</h3>
+                <p><strong>What Rights Do Young People Have in Kenya?</strong></p>
+                <p>Young people are <strong>not just future adults—they are rights-holders today.</strong> The Kenyan Constitution (2010) and various national policies recognize and protect the rights of all youth, including their right to <strong>Sexual and Reproductive Health (SRH)</strong>.</p>
+                
+                <p>According to the Constitution and supporting laws like the <strong>Children Act (2022)</strong> and <strong>Health Act (2017)</strong>, youth have the right to:</p>
+                
+                <p><strong>🟢 1. Health Care</strong></p>
+                <ul>
+                    <li>Including <strong>sexual and reproductive health (SRH)</strong> services like contraception, menstrual products, STI treatment, and HIV testing.</li>
+                    <li>Health services must be <strong>available, accessible, acceptable, and of good quality</strong>—for all, including adolescents and unmarried youth.</li>
+                </ul>
+                
+                <p><strong>🟢 2. Information and Education</strong></p>
+                <ul>
+                    <li>Access to <strong>accurate, age-appropriate, and evidence-based information</strong> on puberty, sex, relationships, HIV, and contraception.</li>
+                    <li>This includes learning through <strong>school curricula</strong>, <strong>digital platforms</strong>, and <strong>community programs</strong>.</li>
+                    <li>Denying information or spreading myths is a violation of rights.</li>
+                </ul>
+                
+                <p><strong>🟢 3. Protection from Violence and Exploitation</strong></p>
+                <ul>
+                    <li>Youth have the right to be safe from:
+                        <ul>
+                            <li><strong>Sexual abuse</strong>, coercion, and harassment.</li>
+                            <li><strong>Child marriage</strong>, trafficking, and harmful practices like FGM.</li>
+                            <li><strong>Emotional or physical abuse</strong> in schools, homes, or relationships.</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <p><strong>🟢 4. Privacy and Dignity</strong></p>
+                <ul>
+                    <li>Health services must be provided in a <strong>confidential</strong> and <strong>respectful</strong> manner.</li>
+                    <li>Providers should not disclose a youth's health information to parents or others without consent (except when life is in danger).</li>
+                    <li>No one should be shamed for their choices, gender identity, or health needs.</li>
+                </ul>
+                
+                <p><strong>Barriers That Youth Face</strong></p>
+                <p>Despite these rights being recognized in law, <strong>many young people still face serious challenges</strong> when trying to access SRHR services or information:</p>
+                
+                <p><strong>❌ 1. Judgment and Stigma</strong></p>
+                <ul>
+                    <li>Youth fear being <strong>mocked, lectured, or reported</strong> by health workers.</li>
+                    <li>Many avoid clinics or pharmacies due to embarrassment or being labeled "spoilt" or "promiscuous."</li>
+                </ul>
+                
+                <p><strong>❌ 2. Discrimination by Providers</strong></p>
+                <ul>
+                    <li>Some health workers <strong>illegally deny contraceptives</strong> or STI treatment to unmarried teens, even though they have the right to access them.</li>
+                    <li>LGBTQ+ youth, pregnant girls, and survivors of sexual violence often face <strong>disrespect or neglect</strong>.</li>
+                </ul>
+                
+                <p><strong>❌ 3. Education Barriers</strong></p>
+                <ul>
+                    <li><strong>Pregnant girls</strong> are still being <strong>expelled from school</strong> or forced into marriage, despite government policies allowing them to return to class.</li>
+                    <li>Inconsistent implementation of <strong>Comprehensive Sexuality Education (CSE)</strong> in schools leaves many youth misinformed or vulnerable.</li>
+                </ul>
+                
+                <p><strong>❌ 4. Lack of Youth-Centered Spaces</strong></p>
+                <ul>
+                    <li>Most health facilities and programs are <strong>designed for adults</strong>, with little consideration for the unique needs of adolescents.</li>
+                    <li>Youth often lack <strong>private, safe spaces</strong> where they can ask questions, access services, and feel understood.</li>
+                </ul>
+                
+                <p><strong>What Can Be Done to Improve Access?</strong></p>
+                <p>Improving youth access to rights and services isn't just about laws—it's about action, mindset shifts, and community support. Here's what works:</p>
+                
+                <p><strong>✅ 1. Establish Youth-Friendly Corners in Clinics</strong></p>
+                <ul>
+                    <li>Designate specific areas where trained health workers provide <strong>non-judgmental, confidential, and age-appropriate</strong> care.</li>
+                    <li>Include free condoms, contraception, menstrual products, counseling, and referral services.</li>
+                    <li>Make the space <strong>welcoming and private</strong>.</li>
+                </ul>
+                
+                <p><strong>✅ 2. Educate Youth on Their Legal Rights</strong></p>
+                <ul>
+                    <li>Use schools, community forums, social media, and peer educators to teach youth that they have:
+                        <ul>
+                            <li>The right to say <strong>yes</strong> or <strong>no</strong> to sex.</li>
+                            <li>The right to access <strong>contraceptives and STI care</strong>.</li>
+                            <li>The right to <strong>return to school after pregnancy</strong>.</li>
+                            <li>The right to <strong>report abuse</strong> without being blamed.</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <p><strong>✅ 3. Train Health Workers and Educators</strong></p>
+                <ul>
+                    <li>Equip providers with skills to communicate respectfully with adolescents.</li>
+                    <li>Break harmful stereotypes about youth and sexuality.</li>
+                    <li>Integrate <strong>Adolescent & Youth-Friendly Services (AYFS)</strong> training in health professional education.</li>
+                </ul>
+                
+                <p><strong>✅ 4. Build Safe Online and Offline Platforms</strong></p>
+                <ul>
+                    <li>Create digital spaces (like <strong>JijueHealth</strong>) where youth can access accurate, stigma-free SRHR content.</li>
+                    <li>Use social media, WhatsApp, and community radio to share Q&A, stories, quizzes, and hotline information.</li>
+                    <li>Support offline clubs, mentorship groups, and safe spaces in schools and youth centers.</li>
+                </ul>
+                
+                <p><strong>Empowering Message for Youth:</strong></p>
+                <p>Your rights are not up for debate. Whether you're 13 or 24, <strong>you deserve respect, information, and care</strong>. If someone denies you your rights—<strong>speak up, seek help, and know you're not alone</strong>.</p>
+                
+                <p><strong>References</strong></p>
+                <ol>
+                    <li><strong>Kenya Ministry of Health (2015).</strong> <em>National Adolescent Sexual and Reproductive Health Policy.</em><br>
+                    👉 <a href="https://www.health.go.ke">https://www.health.go.ke</a></li>
+                    <li><strong>Guttmacher Institute (2021).</strong> <em>Adolescent Access to SRHR in Kenya.</em><br>
+                    👉 <a href="https://www.guttmacher.org">https://www.guttmacher.org</a></li>
+                    <li><strong>UNICEF (2020).</strong> <em>Young People's Rights and Legal Frameworks in Africa.</em><br>
+                    👉 <a href="https://www.unicef.org/esa">https://www.unicef.org/esa</a></li>
+                </ol>
+            </div>
+            
+            <div class="srhr-topic">
+                <h3>8. SRHR in African Cultural Context</h3>
+                <p><strong>🔍 Understanding the Context</strong></p>
+                <p>In many African communities, <strong>discussions about sex, puberty, contraception, or sexuality are often avoided or heavily stigmatized</strong>. These topics are seen as "adult" or "immoral," and youth who bring them up are often viewed as disrespectful or "spoiled."</p>
+                
+                <p>However, this silence doesn't protect youth—it leaves them <strong>vulnerable</strong> to myths, exploitation, and unsafe practices.</p>
+                
+                <p>SRHR must be approached <strong>within the cultural and spiritual realities</strong> of African communities—not by rejecting tradition, but by building bridges between <strong>modern health rights</strong> and <strong>African values</strong> of dignity, life, and wellbeing.</p>
+                
+                <p><strong>🚫 Cultural and Religious Barriers to SRHR</strong></p>
+                
+                <p><strong>1. Taboos Around Sexuality</strong></p>
+                <ul>
+                    <li>Many parents avoid "the talk," creating <strong>a culture of silence</strong>.</li>
+                    <li>Youth often learn from <strong>peers, porn, or social media</strong>, which may spread harmful myths.</li>
+                    <li>Asking about contraception or periods is sometimes seen as "planning to be promiscuous."</li>
+                </ul>
+                
+                <p><strong>2. Harmful Cultural Practices</strong></p>
+                <ul>
+                    <li><strong>Female Genital Mutilation (FGM):</strong> Still practiced in counties like Kisii, Meru, Kuria, West Pokot, and parts of Somali and Maasai communities.
+                        <ul>
+                            <li>Though illegal under the <strong>Prohibition of FGM Act (2011)</strong>, it continues due to beliefs about purity, marriageability, or tradition.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Child marriage:</strong> In poor or rural areas, girls are often married off early to reduce economic burden or preserve "honor."
+                        <ul>
+                            <li>This denies girls education, exposes them to early pregnancies, and increases risks of GBV.</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <p><strong>3. Religious Opposition to SRHR</strong></p>
+                <ul>
+                    <li>Some religious leaders <strong>condemn contraception, abortion</strong>, or even discussion of sexual health.</li>
+                    <li>Even in <strong>life-threatening pregnancies</strong>, some faith-based clinics refuse abortion services.</li>
+                    <li>LGBTQ+ youth face <strong>intense stigma</strong>, exclusion, or violence, often fueled by misinterpretation of scripture.</li>
+                </ul>
+                
+                <p><strong>🧭 Balancing Culture and Rights</strong></p>
+                <p>The goal is not to "fight" African culture—but to <strong>reclaim its positive aspects</strong> and <strong>reframe them in support of SRHR</strong>.</p>
+                
+                <p>💡 Cultural values like <strong>respect, family, dignity, life, and responsibility</strong> align naturally with reproductive justice. The key is <strong>contextual, respectful dialogue</strong>.</p>
+                
+                <p><strong>✅ Reframing Examples:</strong></p>
+                
+                <table>
+                    <tr>
+                        <th><strong>Cultural Value</strong></th>
+                        <th><strong>SRHR Interpretation</strong></th>
+                    </tr>
+                    <tr>
+                        <td><strong>Dignity (heshima)</strong></td>
+                        <td>Every youth deserves respectful, confidential health care.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Responsibility (wajibu)</strong></td>
+                        <td>Using contraception or testing for HIV is responsible, not shameful.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Protection (ulinzi)</strong></td>
+                        <td>Keeping girls in school and safe from early marriage is cultural protection.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Life (uzima)</strong></td>
+                        <td>Preventing maternal deaths through access to safe abortion saves lives.</td>
+                    </tr>
+                </table>
+                
+                <p><strong>🤝 How to Engage Communities</strong></p>
+                
+                <p><strong>1. Use Culturally Resonant Tools</strong></p>
+                <ul>
+                    <li>Integrate <strong>African proverbs, stories, songs, and parables</strong> to communicate SRHR values.
+                        <ul>
+                            <li>E.g., <em>"Jino kwa jino siyo suluhisho"</em> (Revenge is not the answer) -- can be used to talk about ending cycles of GBV.</li>
+                            <li><em>"Samaki mkunje angali mbichi"</em> (Teach early) -- promotes early, age-appropriate education about bodies and rights.</li>
+                        </ul>
+                    </li>
+                    <li>Use <strong>drama, spoken word, and storytelling circles</strong> to unpack myths and normalize open discussion.</li>
+                </ul>
+                
+                <p><strong>2. Involve Key Influencers</strong></p>
+                <ul>
+                    <li><strong>Elders, traditional leaders, and religious figures</strong> hold influence—if they're engaged respectfully, they can become powerful allies.</li>
+                    <li>Train them with <strong>scientifically sound, culturally respectful language</strong>.</li>
+                    <li>Use <strong>"cultural champions"</strong> who blend traditional knowledge with public health awareness.</li>
+                </ul>
+                
+                <p><strong>3. Center Youth Voices Respectfully</strong></p>
+                <ul>
+                    <li>Encourage intergenerational dialogue—not rebellion.</li>
+                    <li>Equip youth with <strong>confidence and cultural fluency</strong> to speak about their needs without alienating their communities.</li>
+                    <li>Celebrate <strong>young role models</strong> who balance culture and rights—students, artists, health workers, etc.</li>
+                </ul>
+                
+                <p><strong>4. Emphasize Shared Values</strong></p>
+                <ul>
+                    <li>Promote <strong>informed choice</strong>, <strong>mutual respect</strong>, and <strong>community wellbeing</strong>—instead of focusing solely on individualism or opposition to tradition.</li>
+                    <li>Remind communities that <strong>SRHR protects families</strong>, prevents suffering, and upholds <strong>African principles of Ubuntu (human dignity and interdependence).</strong></li>
+                </ul>
+                
+                <p><strong>✊ Key Takeaway for Youth and Advocates:</strong></p>
+                <p><strong>Being African and advocating for SRHR are not opposites.</strong> We can <strong>honor our cultures</strong> while challenging what harms us. True empowerment means blending wisdom from our roots with knowledge from today—to build healthier, freer, more respectful communities.</p>
+                
+                <p><strong>References</strong></p>
+                <ol>
+                    <li><strong>IPPF Africa Region (2022).</strong> <em>Reproductive Rights and Cultural Sensitivity.</em><br>
+                    👉 <a href="https://www.ippf.org/about-us/member-associations/africa">https://www.ippf.org/about-us/member-associations/africa</a></li>
+                    <li><strong>Population Council Kenya (2021).</strong> <em>Navigating Culture and SRHR in Kenya.</em><br>
+                    👉 <a href="https://www.popcouncil.org">https://www.popcouncil.org</a></li>
+                    <li><strong>UNFPA Eastern and Southern Africa.</strong> <em>Ending FGM and Child Marriage.</em><br>
+                    👉 <a href="https://esaro.unfpa.org">https://esaro.unfpa.org</a></li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <script>
+        function toggleSRHRContent() {
+            var content = document.getElementById("srhrContent");
+            var button = document.querySelector("#srhr .btn");
+            
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                button.textContent = "Show SRHR Information";
+            } else {
+                content.style.display = "block";
+                button.textContent = "Hide SRHR Information";
+            }
+        }
+    </script>
+
+
 
     <!-- Services Section -->
     <section id="services" class="services">
